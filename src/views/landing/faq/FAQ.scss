@@ -1,0 +1,29 @@
+@import "../../../utililties/theme.scss";
+
+.faq {
+  padding: 24px;
+  padding-bottom: 48px;
+  color: $off-black;
+  background-color: white;
+
+  h5 {
+    text-transform: uppercase;
+    margin: {
+      bottom: 12px;
+      top: 0;
+    }
+  }
+
+  h2 {
+    margin: {
+      top: 0;
+      bottom: 48px;
+    }
+  }
+
+  .collapsible {
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}

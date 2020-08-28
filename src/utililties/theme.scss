@@ -1,0 +1,415 @@
+/*******************
+* Fonts
+*******************/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap");
+
+/*******************
+* Break Points
+*******************/
+
+// Extra Small (landscape view)
+$screen-xs-max: 350px;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-max: 576px;
+
+// Small tablets (portrait view)
+$screen-md-max: 768px;
+
+// Tablets and small desktops
+$screen-lg-max: 992px;
+
+// Large tablets and desktops
+$screen-xl-max: 1200px;
+
+// X-Large tablets and desktops
+$screen-xxl-max: 1400px;
+/*******************
+* Break Mix Ins
+*******************/
+
+// Extra Small devices
+@mixin xs {
+  @media (max-width: #{$screen-xs-max}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (max-width: #{$screen-xl-max}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xxl {
+  @media (max-width: #{$screen-xxl-max}) {
+    @content;
+  }
+}
+
+// Fonts
+$main-font: "Poppins", sans-serif;
+$secondary-font: "Merriweather Sans", sans-serif;
+
+// Colors
+$primary-color: #bb73f1;
+$secondary-color: #939393;
+
+$secondary-purple: #bb69ea8a;
+$secondary-grey: #676767;
+
+$bg-color: #f4f4f4;
+$off-black: #1f1f1f;
+
+// Shadows
+$main-shadow: 10px 20px 35px #00000029;
+
+/*******************
+* Elements
+*******************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+span,
+body {
+  font-family: $main-font;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 34px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+h5 {
+  font-size: 20px;
+  color: $secondary-grey;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p {
+  line-height: 2;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.15s ease;
+}
+
+@include sm {
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 24px;
+  }
+  h5 {
+    font-size: 18px;
+  }
+  h6 {
+    font-size: 16px;
+  }
+}
+
+/*******************
+* Overrides
+*******************/
+:focus {
+  outline: none;
+}
+
+.tl-edges {
+  overflow: hidden;
+}
+
+/*******************
+* Fade In Animations
+*******************/
+.slideLeft {
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  opacity: 0;
+  transform: translateX(100%);
+}
+.slideLeft.enter {
+  transition: opacity 1s ease-in-out,
+    transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 1;
+  transform: translateX(0);
+}
+.slideUp {
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.slideUp.enter {
+  transition: opacity 1s ease-in-out,
+    transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (print), (prefers-reduced-motion: reduce) {
+  .slideLeft,
+  .slideUp {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/*******************
+* Section Common
+*******************/
+section {
+  &.common {
+    padding: 24px;
+
+    .title {
+      margin-top: 0;
+      margin-bottom: 24px;
+
+      h2 {
+        margin: 0;
+        font-weight: 600;
+      }
+    }
+
+    h5 {
+      text-transform: uppercase;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    p {
+      line-height: 2;
+    }
+  }
+
+  &.bg-white {
+    background-color: white;
+  }
+}
+
+/*******************
+* Section Header
+*******************/
+.default-header {
+  padding: 24px;
+  padding-bottom: 48px;
+  background-color: white;
+  color: $off-black;
+  min-height: calc(100vh - 96px);
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+
+  .top {
+    min-height: calc(30vh - 48px);
+    width: 100%;
+  }
+
+  .middle {
+    min-height: 40vh;
+    width: 100%;
+
+    .content {
+      .common {
+        font-size: 150px;
+        font-weight: 600;
+        -webkit-text-stroke: 1px $secondary-grey;
+        color: white;
+        margin: 0;
+        line-height: 1;
+        margin-bottom: -60px;
+        text-transform: uppercase;
+      }
+
+      .custom {
+        font-size: 120px;
+        font-weight: 600;
+        margin: 0;
+        line-height: 1;
+        margin-top: -30px;
+        max-width: 1200px;
+      }
+    }
+  }
+
+  .bottom {
+    min-height: calc(30vh - 48px);
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    display: flex;
+
+    .link-container {
+      flex-grow: 1;
+
+      .link {
+        color: $secondary-color;
+        display: inline-flex;
+        align-items: baseline;
+
+        h5 {
+          margin: 0;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.25em;
+        }
+
+        svg {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .overview {
+      width: 600px;
+      margin: 0;
+      color: $secondary-color;
+      line-height: 2;
+    }
+  }
+
+  @include xl {
+    .bottom .overview {
+      width: 500px;
+    }
+  }
+
+  @include lg {
+    .common {
+      font-size: 120px !important;
+    }
+    .custom {
+      font-size: 100px !important;
+    }
+    .bottom {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      padding-top: 76px;
+
+      .overview {
+        width: 100%;
+        padding-bottom: 48px;
+      }
+    }
+  }
+
+  @include md {
+    .common {
+      font-size: 100px !important;
+    }
+    .custom {
+      font-size: 80px !important;
+    }
+  }
+
+  @include sm {
+    .common {
+      font-size: 50px !important;
+      margin-bottom: -10px !important;
+    }
+
+    .custom {
+      font-size: 40px !important;
+      margin-top: -20px !important;
+    }
+  }
+
+  @include xs {
+    .common {
+      font-size: 50px !important;
+      margin-top: -20px !important;
+    }
+
+    .custom {
+      font-size: 40px !important;
+      margin-top: 10px !important;
+    }
+  }
+}
+
+/*******************
+* Blog Styles
+*******************/
+.category {
+  color: white;
+
+  .business {
+    background-color: #048ba8;
+  }
+  .design {
+    background-color: #43aa8b;
+  }
+  .development {
+    background-color: #f9c74f;
+  }
+}
+
+/*******************
+* Utilities
+*******************/
+.pl {
+  padding-left: 8.33%;
+}
+.pr {
+  padding-right: 8.33%;
+}
+.pl {
+  padding-top: 7%;
+}
+.pr {
+  padding-bottom: 7%;
+}

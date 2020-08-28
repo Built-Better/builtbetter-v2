@@ -1,0 +1,206 @@
+@import "../utililties/theme.scss";
+
+.ft {
+  padding: 24px;
+  background-color: $off-black;
+  color: white;
+  margin-bottom: 0 !important;
+
+  a:hover {
+    color: $primary-color;
+  }
+
+  .ft-top {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+
+    div {
+      &:nth-of-type(1) {
+        width: 50%;
+
+        @include xxl {
+          width: 45%;
+        }
+
+        @include xl {
+          width: 60%;
+        }
+
+        @include md {
+          width: 100%;
+        }
+
+        h2 {
+          margin: 0;
+          font-weight: 600;
+        }
+      }
+      &:nth-of-type(2) {
+        width: 25%;
+
+        @include xxl {
+          width: 20%;
+        }
+
+        @include xl {
+          width: 100%;
+          order: 3;
+          margin-top: 6rem;
+        }
+
+        h5 {
+          margin: {
+            top: 0;
+            bottom: 24px;
+          }
+          text-transform: uppercase;
+        }
+
+        .phone,
+        .email {
+          margin: 0;
+
+          @include sm {
+            font-size: 22px;
+          }
+        }
+      }
+      &:nth-of-type(3) {
+        width: 25%;
+        text-align: right;
+
+        @include xxl {
+          width: 35%;
+        }
+
+        @include xl {
+          width: 40%;
+        }
+
+        @include md {
+          width: 100%;
+          text-align: left;
+          margin-top: 48px;
+        }
+
+        img {
+          width: 100%;
+          max-width: 200px;
+        }
+      }
+    }
+  }
+
+  .ft-bottom {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    padding-top: 6rem;
+
+    @include xl {
+      padding-top: 24px;
+    }
+
+    div {
+      &.social {
+        width: 35%;
+
+        @include xl {
+          width: 100%;
+        }
+
+        h5 {
+          text-transform: uppercase;
+          margin-bottom: 24px;
+
+          @include xl {
+            margin-top: 24px;
+          }
+        }
+
+        .accounts {
+          display: flex;
+
+          @include sm {
+            flex-direction: column;
+
+            a {
+              padding-bottom: 12px;
+            }
+          }
+
+          a {
+            margin-right: 24px;
+          }
+
+          p {
+            margin: 0;
+          }
+        }
+      }
+
+      &.copy {
+        width: 30%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        @include xl {
+          width: 50%;
+          justify-content: flex-start;
+          padding-top: 6rem;
+
+          svg {
+            margin-left: 0;
+          }
+        }
+
+        @include md {
+          width: 100%;
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+
+      &.links {
+        width: 35%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        @include xl {
+          width: 50%;
+        }
+
+        @include md {
+          width: 100%;
+          padding-top: 24px;
+          justify-content: flex-start;
+        }
+
+        @include sm {
+          flex-direction: column;
+          align-items: baseline;
+
+          .divider {
+            display: none;
+          }
+        }
+
+        p {
+          margin: 0;
+        }
+
+        .divider {
+          margin: {
+            left: 5px;
+            right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

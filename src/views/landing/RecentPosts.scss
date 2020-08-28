@@ -1,0 +1,103 @@
+@import "../../utililties/theme.scss";
+
+.recent-posts {
+  padding: 24px;
+  color: $off-black;
+  padding-top: 72px;
+
+  h5 {
+    text-transform: uppercase;
+    margin: {
+      top: 0;
+      bottom: 12px;
+    }
+  }
+
+  h2 {
+    margin: {
+      top: 0;
+      bottom: 48px;
+    }
+  }
+
+  .posts {
+    > div {
+      display: flex;
+      flex-flow: wrap;
+    }
+
+    .post-wrapper {
+      width: calc(33.3% - 16px);
+      height: 600px;
+      position: relative;
+      cursor: pointer;
+
+      &:not(:last-of-type) {
+        margin-right: 24px;
+      }
+
+      > div {
+        height: 100%;
+
+        .post-card {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  @include lg {
+    .posts {
+      > div {
+        flex-direction: row;
+      }
+
+      .post-wrapper {
+        margin-right: 0 !important;
+        margin-bottom: 24px;
+        width: calc(50% - 12px);
+
+        &:not(:last-of-type) {
+          margin-right: 0 !important;
+        }
+
+        &:nth-of-type(odd) {
+          margin-right: 24px !important;
+        }
+
+        img {
+          height: inherit;
+          width: -webkit-fill-available;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  @include md {
+    .posts {
+      .post-wrapper {
+        width: 100% !important;
+        margin-right: 0 !important;
+
+        &:nth-of-type(odd) {
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+
+  @include sm {
+    padding: 0;
+
+    .posts .post-card {
+      .post-top {
+        height: 200px;
+      }
+
+      img {
+        height: inherit;
+      }
+    }
+  }
+}

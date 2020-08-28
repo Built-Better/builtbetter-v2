@@ -1,0 +1,74 @@
+@import "../utililties/theme.scss";
+
+body {
+  background-color: $bg-color;
+  margin: 0;
+  padding: {
+    top: 24px;
+    right: 24px;
+    left: 80px;
+  }
+}
+
+.main-container {
+  &[data-collapsed="true"] {
+    main {
+      transform: scale(0.487);
+      top: 0px;
+      pointer-events: none;
+    }
+  }
+}
+
+main {
+  transition: transform 750ms ease 0s;
+  transform-origin: 100% 0%;
+}
+
+section {
+  margin-bottom: 24px;
+}
+
+.block-container {
+  padding: 0 5%;
+}
+
+// Toastify Overrides
+.Toastify__toast {
+  border-radius: 4px;
+  background-color: $primary-color !important;
+  padding: 20px;
+  text-align: center;
+}
+
+.Toastify__toast-body {
+  white-space: pre-line;
+  font-family: $main-font;
+  color: white;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.Toastify__close-button--default {
+  color: white !important;
+}
+
+@include lg {
+  body {
+    padding: {
+      right: 12px;
+      left: 12px;
+    }
+  }
+
+  .main-container {
+    &[data-collapsed="true"] {
+      main {
+        transform: none;
+        transform-origin: initial;
+        top: 0px;
+        pointer-events: none;
+      }
+    }
+  }
+}

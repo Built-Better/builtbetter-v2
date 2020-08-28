@@ -1,0 +1,112 @@
+@import "../utililties/theme.scss";
+
+.post-card {
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+
+  &:hover {
+    box-shadow: $main-shadow;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .post-top {
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      min-width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .post-bottom {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    flex-grow: 1;
+    padding: {
+      top: 15px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+    }
+
+    .title {
+      text-align: center;
+      width: fit-content;
+      height: 82px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      margin: {
+        top: 0;
+        bottom: 0;
+        left: auto;
+        right: auto;
+      }
+
+      .title-text {
+        margin: {
+          top: 0;
+          bottom: 0.5rem;
+        }
+        font-weight: 500;
+      }
+
+      .underline-padded {
+        margin: {
+          left: auto;
+          right: auto;
+          top: 0;
+          bottom: 0;
+        }
+      }
+    }
+
+    .date {
+      font-style: italic;
+      color: $secondary-color;
+      font-weight: 500;
+      margin-top: 0;
+    }
+
+    .body {
+      text-align: center;
+      padding-top: 0.5rem;
+      color: $secondary-grey;
+    }
+
+    .bottom {
+      display: flex;
+      padding-top: 1rem;
+      text-transform: uppercase;
+      font-family: $secondary-font;
+      font-weight: bold;
+      flex-grow: 1;
+      align-items: flex-end;
+
+      .category {
+        display: inline-flex;
+        > div {
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+}

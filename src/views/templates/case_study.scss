@@ -1,0 +1,50 @@
+@import "../../utililties/theme.scss";
+
+.case-study {
+  section {
+    &.image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: {
+        top: 48px;
+        bottom: 48px;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &.testimonial {
+      display: flex;
+      padding-top: 72px;
+      padding-bottom: 72px;
+
+      .left {
+        p {
+          padding-top: 48px;
+          font-style: italic;
+        }
+      }
+
+      .right {
+        padding-left: 96px;
+        padding-top: 24px;
+      }
+    }
+  }
+
+  @include lg {
+    .testimonial {
+      flex-direction: column;
+
+      .right {
+        padding-left: 0 !important;
+        padding-top: 48px !important;
+        padding-bottom: 24px;
+        margin: auto;
+      }
+    }
+  }
+}

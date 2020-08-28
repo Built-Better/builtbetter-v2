@@ -1,0 +1,33 @@
+@import "../../utililties/theme.scss";
+
+.team {
+  padding: 24px;
+  padding-bottom: 48px;
+  color: $off-black;
+  background-color: white;
+
+  h5 {
+    text-transform: uppercase;
+    margin: {
+      top: 24px;
+      bottom: 12px;
+    }
+  }
+
+  h2 {
+    margin: {
+      top: 0;
+      bottom: 48px;
+    }
+  }
+
+  .members {
+    display: flex;
+  }
+
+  @include md {
+    .members {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@import "../../utililties/theme.scss";
+
+.service-overview {
+  padding: 24px;
+  padding-bottom: 48px;
+  margin-bottom: 48px;
+
+  h5 {
+    text-transform: uppercase;
+    margin: {
+      top: 0;
+      bottom: 6px;
+    }
+  }
+
+  h2 {
+    white-space: break-spaces;
+    margin: {
+      top: 0;
+      bottom: 48px;
+    }
+  }
+
+  .description {
+    margin-top: 0;
+    margin-bottom: 48px;
+    line-height: 2;
+  }
+
+  .service-highlights {
+    display: flex;
+    padding-bottom: 24px;
+
+    .row {
+      padding-right: 192px;
+
+      p {
+        margin-top: 24px;
+        margin-bottom: 0;
+      }
+    }
+
+    .learn-more {
+      flex-grow: 1;
+      align-items: flex-end;
+      justify-content: flex-end;
+      display: flex;
+
+      p {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: $secondary-color;
+
+        &:hover {
+          svg {
+            transform: translateX(15px);
+          }
+        }
+
+        svg {
+          margin-left: 10px;
+          transition: transform 0.25s ease-in-out;
+        }
+      }
+    }
+  }
+
+  @include xl {
+    .service-highlights {
+      .row {
+        padding-right: 72px;
+      }
+    }
+  }
+
+  @include lg {
+    .service-highlights {
+      display: flex;
+
+      .row {
+        padding-right: 96px;
+      }
+    }
+  }
+
+  @include md {
+    .service-highlights {
+      flex-direction: column;
+      flex-flow: wrap;
+    }
+
+    .learn-more {
+      width: 100% !important;
+      padding-top: 48px;
+      justify-content: start !important;
+    }
+  }
+}

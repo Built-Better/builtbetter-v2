@@ -1,0 +1,134 @@
+@import "../../utililties/theme.scss";
+
+.selected-work {
+  background-color: white;
+  padding: 24px;
+
+  h5 {
+    text-transform: uppercase;
+    margin: {
+      bottom: 12px;
+      top: 0;
+    }
+  }
+
+  h2 {
+    margin: {
+      top: 0;
+      bottom: 48px;
+    }
+  }
+
+  .projects {
+    display: flex;
+
+    .project {
+      width: 100%;
+      height: 550px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+
+      &:not(:last-of-type) {
+        margin-right: 24px;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+        .overlay {
+          background-color: #000000ab;
+        }
+        .info .title {
+          transform: translateY(0);
+        }
+
+        .info .more {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      > div {
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+
+      img {
+        transition: transform 3s ease-out 0s;
+        height: -webkit-fill-available;
+        width: inherit;
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+      }
+
+      .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transition: background-color 0.25s ease-in-out;
+        z-index: 1;
+        background-color: #00000063;
+      }
+
+      .info {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: 24px;
+        color: white;
+        z-index: 2;
+
+        .title {
+          margin-bottom: 24px;
+          transform: translateY(55px);
+          transition: transform 0.25s ease-in-out;
+          max-width: calc(100% - 24px);
+        }
+
+        .more {
+          opacity: 0;
+          margin-top: 0;
+          transform: translateY(15px);
+          transition: opacity 0.5s ease, transform 0.25s ease-in-out;
+          text-transform: uppercase;
+          letter-spacing: 0.5em;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @include xl {
+    .projects .project {
+      height: 450px;
+    }
+  }
+
+  @include lg {
+    .projects .project {
+      height: 350px;
+    }
+  }
+
+  @include md {
+    .projects {
+      flex-direction: column;
+
+      .project {
+        margin-bottom: 24px;
+        height: 450px;
+      }
+    }
+  }
+}

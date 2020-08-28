@@ -1,0 +1,156 @@
+@import "../../utililties/theme.scss";
+
+.blog_post {
+  .link-container {
+    h5 {
+      color: $secondary-color;
+      margin: 0;
+    }
+  }
+  .overview {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    h5 {
+      color: $secondary-color;
+      margin: 0;
+      text-transform: uppercase;
+      margin-right: 10px;
+    }
+
+    .social-icon {
+      margin-right: 10px;
+      border-radius: 50%;
+      height: 45px;
+      width: 45px;
+      background-color: $secondary-purple;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: $primary-color;
+      cursor: pointer;
+      transition: color 0.15s ease, background-color 0.15s ease;
+
+      &:hover {
+        background-color: $primary-color;
+        color: white;
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .post-image {
+    padding: 4rem 0;
+    text-align: center;
+
+    img {
+      height: auto;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+
+  .post-body {
+    background-color: white;
+    padding: 24px;
+  }
+
+  .related {
+    padding: 24px;
+    padding-bottom: 72px;
+    padding-top: 48px;
+
+    h5 {
+      text-transform: uppercase;
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+
+    .related-posts {
+      display: flex;
+
+      > div {
+        width: calc(33.3% - 24px);
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        &:not(:last-of-type) {
+          margin-right: 24px;
+        }
+      }
+
+      .post-card {
+        height: 600px;
+      }
+    }
+  }
+
+  @include lg {
+    .overview {
+      justify-content: start;
+    }
+
+    .related {
+      .related-posts {
+        flex-direction: column;
+        flex-flow: wrap;
+
+        .post-container {
+          &:nth-of-type(odd) {
+            margin-right: 24px !important;
+          }
+          &:nth-of-type(even) {
+            margin-right: 0px !important;
+          }
+        }
+      }
+    }
+
+    .related-posts > div {
+      width: calc(50% - 12px) !important;
+    }
+  }
+
+  @include md {
+    .related-posts {
+      > div {
+        width: 100% !important;
+        margin-bottom: 24px;
+      }
+    }
+
+    .related .related-posts {
+      .post-container {
+        &:nth-of-type(odd) {
+          margin-right: 0 !important;
+        }
+        &:nth-of-type(even) {
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+
+  @include sm {
+    .related {
+      padding: {
+        left: 0;
+        right: 0;
+      }
+    }
+    .overview {
+      flex-direction: column;
+      align-items: baseline;
+
+      h5,
+      .social-icon {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

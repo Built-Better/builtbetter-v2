@@ -1,0 +1,90 @@
+@import "../../utililties/theme.scss";
+
+.principles {
+  padding: 24px;
+  padding-bottom: 48px;
+  color: $off-black;
+  background-color: white;
+
+  h5 {
+    text-transform: uppercase;
+    margin: {
+      top: 24px;
+      bottom: 12px;
+    }
+  }
+
+  h2 {
+    margin: {
+      top: 0;
+      bottom: 48px;
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+
+    h3 {
+      margin: 0;
+      padding-bottom: 24px;
+    }
+
+    .items {
+      display: flex;
+
+      .col {
+        &:not(:first-of-type) {
+          padding-left: 76px;
+        }
+
+        p {
+          margin: 0;
+          padding: 12px 0;
+        }
+      }
+    }
+
+    .what-we-do {
+      width: calc(50% - 24.5px);
+      padding-right: 24px;
+      border-right: 1px solid $off-black;
+    }
+
+    .what-we-dont {
+      width: calc(50% - 24.5px);
+      padding-left: 24px;
+    }
+  }
+
+  @include xxl {
+    .items {
+      flex-direction: column;
+
+      .col {
+        &:not(:first-of-type) {
+          padding-left: 0 !important;
+        }
+      }
+    }
+  }
+
+  @include lg {
+    .body {
+      display: block;
+
+      .what-we-do,
+      .what-we-dont {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        border-right: none;
+      }
+
+      .what-we-dont {
+        padding-top: 24px;
+      }
+    }
+  }
+}

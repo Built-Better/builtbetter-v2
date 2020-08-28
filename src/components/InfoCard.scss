@@ -1,0 +1,92 @@
+@import "../utililties/theme.scss";
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  color: white;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  > div {
+    height: 100%;
+    padding: 36px;
+    background-color: $off-black;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 24px;
+  }
+
+  &:hover {
+    box-shadow: 10px 20px 35px #00000029;
+
+    > div {
+      background-color: white;
+      color: $off-black;
+    }
+
+    p {
+      opacity: 1;
+      transform: translateY(0px);
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+    }
+
+    .bottom .more {
+      opacity: 1;
+      transform: translateX(0);
+      transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+    }
+  }
+
+  .title {
+    font-weight: 500;
+    margin: 0;
+  }
+
+  p {
+    flex-grow: 1;
+    margin: {
+      top: 36px;
+      bottom: 36px;
+    }
+    line-height: 2;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0s ease;
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+
+    .number {
+      font-weight: 600;
+      font-family: $main-font;
+      font-size: 26px;
+      flex-grow: 1;
+    }
+
+    .more {
+      opacity: 0;
+      transform: translateX(-15px);
+      text-transform: uppercase;
+      transition: opacity 0s ease;
+      font-family: $main-font;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-left: 10px;
+        line,
+        path {
+          stroke: $off-black;
+        }
+      }
+    }
+  }
+}

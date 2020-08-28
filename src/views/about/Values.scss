@@ -1,0 +1,66 @@
+@import "../../utililties/theme.scss";
+
+.values {
+  padding: 24px;
+  padding-bottom: 48px;
+  color: $off-black;
+
+  h5 {
+    text-transform: uppercase;
+    margin: {
+      top: 24px;
+      bottom: 12px;
+    }
+  }
+
+  h2 {
+    margin: {
+      top: 0;
+      bottom: 48px;
+    }
+  }
+
+  .info-cards {
+    display: flex;
+
+    .info-card {
+      min-height: 450px;
+    }
+  }
+
+  @include xxl {
+    .info-cards {
+      flex-direction: column;
+      flex-flow: wrap;
+
+      .info-card {
+        width: calc(50% - 12px);
+        margin-bottom: 24px;
+
+        &:nth-of-type(odd) {
+          margin-right: 12px;
+        }
+
+        &:nth-of-type(even) {
+          margin-left: 12px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  @include md {
+    .info-cards .info-card {
+      width: 100%;
+      margin: {
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 24px;
+      }
+    }
+  }
+
+  @include sm {
+    padding: 0;
+  }
+}

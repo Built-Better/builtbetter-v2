@@ -1,0 +1,91 @@
+@import "../../utililties/theme.scss";
+
+.service-grid {
+  padding: 24px;
+  color: $off-black;
+
+  h5 {
+    text-transform: uppercase;
+    margin: {
+      top: 0;
+      bottom: 6px;
+    }
+  }
+
+  h2 {
+    margin: {
+      top: 0;
+      bottom: 48px;
+    }
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+
+    .service-grid-item {
+      width: calc(33.3% - 96px);
+      cursor: pointer;
+      padding: 48px;
+      min-height: 300px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: background-color 0.25s ease, color 0.25s ease;
+
+      &:hover {
+        background-color: $off-black;
+        color: white;
+
+        h4 {
+          opacity: 0;
+          transform: translate(-50%, 10px);
+          transition-delay: 0s;
+        }
+
+        p {
+          transform: translateY(0);
+          opacity: 1;
+          transition-delay: 0.25s;
+        }
+      }
+
+      h4 {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+        transition-delay: 0.25s;
+      }
+
+      p {
+        margin: 0;
+        opacity: 0;
+        transform: translateY(15px);
+        transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+        transition-delay: 0.25s;
+      }
+    }
+  }
+
+  @include lg {
+    .grid {
+      .service-grid-item {
+        width: calc(50% - 96px);
+      }
+    }
+  }
+
+  @include md {
+    .grid {
+      .service-grid-item {
+        width: calc(100% - 96px);
+      }
+    }
+  }
+}

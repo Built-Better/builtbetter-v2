@@ -1,0 +1,147 @@
+@import "../../utililties/theme.scss";
+
+.blog-subscribe {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  width: -webkit-fill-available;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background-color: white;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid $secondary-color;
+    line-height: 0.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+  }
+
+  h2 span {
+    padding: 0 25px;
+    background-color: $bg-color;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  @include sm {
+    padding: 50px 20px;
+    max-width: 100%;
+
+    h2 {
+      line-height: initial;
+      border-top: 2px solid #939393;
+      font-size: 34px;
+    }
+
+    span {
+      padding: 0 !important;
+    }
+  }
+
+  @include xs {
+    padding: 50px 10px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+
+    @include sm {
+      max-width: 100%;
+    }
+
+    .title-container {
+      .title {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-weight: inherit;
+      }
+    }
+
+    .text {
+      text-align: center;
+      padding-top: 1rem;
+
+      p {
+        margin: 0;
+        line-height: 2;
+      }
+    }
+  }
+
+  #subscribe-form {
+    margin-top: 1rem;
+    width: 95%;
+    margin: {
+      top: 1rem;
+      left: auto;
+      right: auto;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
+    .submit {
+      width: 100%;
+      display: flex;
+
+      @include sm {
+        flex-direction: column;
+      }
+
+      input {
+        padding: 10px;
+        flex-grow: 1;
+        font-size: 16px;
+        border: 1px solid #939393;
+        color: $primary-color;
+        caret-color: $primary-color;
+        font-weight: bold;
+
+        &::placeholder {
+          font-weight: initial;
+        }
+      }
+
+      button {
+        background-color: $secondary-color;
+        color: white;
+        border: 1px solid $secondary-color;
+        letter-spacing: 0.25em;
+        margin-left: -4px;
+        font-weight: 500;
+        font-family: $main-font;
+        font-size: 14px;
+        padding: 10px 20px;
+
+        @include sm {
+          margin: {
+            left: 0;
+            top: 1rem;
+          }
+        }
+
+        &:hover {
+          color: $primary-color;
+          background-color: white;
+          cursor: pointer;
+        }
+
+        &.loading {
+          background-color: white;
+        }
+      }
+    }
+  }
+}

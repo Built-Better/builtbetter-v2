@@ -1,0 +1,68 @@
+@import "../utililties/theme.scss";
+
+.cta {
+  padding: {
+    top: 96px;
+    left: 24px;
+    right: 24px;
+    bottom: 96px;
+  }
+  text-align: center;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid $secondary-color;
+    line-height: 0.1em;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+  }
+
+  h2 span {
+    padding: 0 25px;
+    background-color: $bg-color;
+  }
+
+  .body {
+    padding-top: 48px;
+    margin: 0;
+    white-space: pre-wrap;
+    line-height: 2;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 24px;
+
+    &:hover {
+      svg {
+        transform: translateX(15px);
+      }
+    }
+
+    svg {
+      margin-left: 10px;
+      transition: transform 0.25s ease-in-out;
+
+      line {
+        stroke: $off-black;
+      }
+      path {
+        stroke: $off-black;
+      }
+    }
+  }
+
+  @include md {
+    h2 {
+      line-height: initial;
+      border-top: 2px solid $secondary-color;
+
+      span {
+        padding: 0;
+      }
+    }
+  }
+}
