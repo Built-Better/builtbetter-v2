@@ -13,8 +13,6 @@ ToolkitGrid.defaultProps = {
 }
 
 export default function ToolkitGrid(props) {
-  console.log(props)
-
   return (
     <section className="toolkit-grid pl pr">
       <VisibilitySensor once partialVisibility={true}>

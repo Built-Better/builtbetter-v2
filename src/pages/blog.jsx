@@ -8,8 +8,6 @@ import BlogPosts from "../views/blog/BlogPosts"
 import Subscribe from "../views/blog/Subscribe"
 
 const BlogPage = data => {
-  console.log(data)
-
   return (
     <Layout fluid="true">
       <SEO title="Built Better Blog" />
