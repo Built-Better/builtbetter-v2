@@ -179,6 +179,7 @@
 
   @include sm {
     .hero-container {
+      padding-top: 48px;
       h1 {
         font-size: 40px;
       }

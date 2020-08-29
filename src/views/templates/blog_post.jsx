@@ -149,7 +149,7 @@ const BlogPostTemplate = ({ data, location }) => {
             dangerouslySetInnerHTML={createMarkup(post.body)}
           ></div>
         </section>
-        <section className="related">
+        <section className="related pl pr">
           <VisibilitySensor once partialVisibility={true}>
             {({ isVisible }) => (
               <h5 className={isVisible ? "slideUp enter" : "slideUp"}>

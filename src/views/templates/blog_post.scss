@@ -61,10 +61,6 @@
   }
 
   .related {
-    padding: 24px;
-    padding-bottom: 72px;
-    padding-top: 48px;
-
     h5 {
       text-transform: uppercase;
       margin-top: 24px;
@@ -157,12 +153,6 @@
   }
 
   @include sm {
-    .related {
-      padding: {
-        left: 0;
-        right: 0;
-      }
-    }
     .overview {
       flex-direction: row;
       align-items: baseline;
