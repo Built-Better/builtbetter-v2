@@ -244,11 +244,11 @@ section {
 * Section Header
 *******************/
 .default-header {
-  padding: 24px;
-  padding-bottom: 48px;
+  padding: 0 !important;
   background-color: white;
   color: $off-black;
-  min-height: calc(100vh - 96px);
+  min-height: calc(100vh - 48px);
+  height: calc(100vh - 48px);
   display: flex;
   flex-direction: column;
   flex-flow: wrap;
@@ -259,7 +259,6 @@ section {
   }
 
   .middle {
-    min-height: 40vh;
     width: 100%;
 
     .content {
@@ -286,7 +285,6 @@ section {
   }
 
   .bottom {
-    min-height: calc(30vh - 48px);
     width: 100%;
     flex-direction: row;
     justify-content: flex-end;
@@ -323,18 +321,6 @@ section {
   }
 
   @include xl {
-    .bottom .overview {
-      width: 500px;
-    }
-  }
-
-  @include lg {
-    .common {
-      font-size: 120px !important;
-    }
-    .custom {
-      font-size: 100px !important;
-    }
     .bottom {
       flex-direction: column-reverse;
       align-items: flex-start;
@@ -344,6 +330,15 @@ section {
         width: 100%;
         padding-bottom: 48px;
       }
+    }
+  }
+
+  @include lg {
+    .common {
+      font-size: 120px !important;
+    }
+    .custom {
+      font-size: 100px !important;
     }
   }
 

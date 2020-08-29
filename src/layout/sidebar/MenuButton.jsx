@@ -38,7 +38,7 @@ export default function MenuButton(props) {
   }, [scrolled])
 
   return (
-    <>
+    <div style={{ height: "inherit" }}>
       <AniLink cover duration={1.5} direction="right" bg="#bb73f1" to="/">
         <img
           className="logo-full"
@@ -70,6 +70,6 @@ export default function MenuButton(props) {
       >
         <HamSVG open={props.sidebarOpen} />
       </div>
-    </>
+    </div>
   )
 }

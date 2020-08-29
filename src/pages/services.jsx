@@ -10,9 +10,9 @@ const ServicesPage = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      <section className="default-header pl pr">
+      <section className="default-header">
         <div
-          className="middle"
+          className="middle pl pr"
           style={{ display: "flex", alignItems: "center" }}
         >
           <VisibilitySensor once partialVisibility={true}>

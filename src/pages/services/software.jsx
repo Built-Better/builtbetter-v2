@@ -20,9 +20,9 @@ const SoftwarePage = props => {
     <Layout>
       <SEO title="Services | Software" />
       <div>
-        <section className="default-header pl pr">
+        <section className="default-header">
           <div
-            className="middle"
+            className="middle pl pr"
             style={{ display: "flex", alignItems: "center" }}
           >
             <VisibilitySensor once partialVisibility={true}>

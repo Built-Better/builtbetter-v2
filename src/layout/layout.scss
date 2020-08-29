@@ -62,6 +62,7 @@ section {
   }
 
   .main-container {
+    padding-top: 35px;
     &[data-collapsed="true"] {
       main {
         transform: none;

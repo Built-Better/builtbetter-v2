@@ -22,7 +22,7 @@ export default function PostCard({ post }) {
           <p className="date">{formatDate(post.date_posted)}</p>
 
           <div className="title">
-            <h4 className="title-text">{post.title}</h4>
+            <h6 className="title-text">{post.title}</h6>
             <div className="underline-padded"></div>
           </div>
           <p className="body">{post.summary}</p>

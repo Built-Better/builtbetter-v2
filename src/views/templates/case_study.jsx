@@ -18,7 +18,7 @@ const CaseStudy = ({ data }) => {
       <div className="case-study">
         <section className="default-header pl pr">
           <div
-            className="middle"
+            className="middle pl pr"
             style={{ display: "flex", alignItems: "center" }}
           >
             <VisibilitySensor once partialVisibility={true}>
@@ -29,7 +29,7 @@ const CaseStudy = ({ data }) => {
                       isVisible ? "slideUp enter common" : "slideUp common"
                     }
                   >
-                    Case Studys
+                    Case Study
                   </h1>
                   <h1
                     className={
@@ -42,7 +42,7 @@ const CaseStudy = ({ data }) => {
               )}
             </VisibilitySensor>
           </div>
-          <div className="bottom">
+          <div className="bottom pl pr">
             <div className="link-container">
               <VisibilitySensor once partialVisibility={true}>
                 {({ isVisible }) => (

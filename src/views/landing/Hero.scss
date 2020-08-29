@@ -3,10 +3,11 @@
 .hero {
   background-color: white;
   position: relative;
-  min-height: calc(100vh - 48px);
+  height: calc(100vh - 48px);
 
   .hero-container {
-    min-height: calc(100vh - 48px);
+    height: -webkit-fill-available;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
 
@@ -142,6 +143,13 @@
   }
 
   @include lg {
+    min-height: calc(100vh - 48px);
+    height: auto;
+
+    .hero-container {
+      min-height: calc(100vh - 48px);
+    }
+
     .explore {
       display: none;
     }

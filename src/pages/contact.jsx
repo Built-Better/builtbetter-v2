@@ -12,8 +12,10 @@ const ContactPage = props => {
       <SEO title="Contact" />
       <div className="contact">
         <section className="default-header">
-          <div className="top"></div>
-          <div className="middle">
+          <div
+            className="middle pl pr"
+            style={{ display: "flex", alignItems: "center" }}
+          >
             <VisibilitySensor once partialVisibility={true}>
               {({ isVisible }) => (
                 <div className="content">
