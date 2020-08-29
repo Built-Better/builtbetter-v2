@@ -47,4 +47,10 @@
       }
     }
   }
+
+  @include sm {
+    .middle {
+      padding-bottom: 48px !important;
+    }
+  }
 }

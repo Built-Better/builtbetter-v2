@@ -352,26 +352,28 @@ section {
   }
 
   @include sm {
+    height: -webkit-fill-available;
+
     .common {
       font-size: 50px !important;
-      margin-bottom: -10px !important;
+      margin-bottom: 0px !important;
     }
 
     .custom {
       font-size: 40px !important;
-      margin-top: -20px !important;
+      margin-top: 0px !important;
     }
   }
 
   @include xs {
     .common {
       font-size: 50px !important;
-      margin-top: -20px !important;
+      margin-top: 0px !important;
     }
 
     .custom {
       font-size: 40px !important;
-      margin-top: 10px !important;
+      margin-top: 0px !important;
     }
   }
 }

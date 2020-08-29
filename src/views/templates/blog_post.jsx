@@ -68,18 +68,17 @@ const BlogPostTemplate = ({ data, location }) => {
       />
       <div className="blog_post">
         <section className="default-header">
-          <div className="top"></div>
-          <div className="middle">
+          <div
+            className="middle pl pr"
+            style={{
+              paddingBottom: "0",
+              alignItems: "center",
+              display: "flex",
+            }}
+          >
             <VisibilitySensor once partialVisibility={true}>
               {({ isVisible }) => (
                 <div className="content">
-                  <h1
-                    className={
-                      isVisible ? "slideUp enter common" : "slideUp common"
-                    }
-                  >
-                    {post.category}
-                  </h1>
                   <h1
                     className={
                       isVisible ? "slideUp enter custom" : "slideUp custom"
@@ -91,7 +90,12 @@ const BlogPostTemplate = ({ data, location }) => {
               )}
             </VisibilitySensor>
           </div>
-          <div className="bottom">
+          <div
+            className="bottom pl pr"
+            style={{
+              paddingTop: "0",
+            }}
+          >
             <div className="link-container">
               <VisibilitySensor once partialVisibility={true}>
                 {({ isVisible }) => (

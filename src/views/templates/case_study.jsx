@@ -19,7 +19,11 @@ const CaseStudy = ({ data }) => {
         <section className="default-header pl pr">
           <div
             className="middle pl pr"
-            style={{ display: "flex", alignItems: "center" }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              paddingBottom: "0",
+            }}
           >
             <VisibilitySensor once partialVisibility={true}>
               {({ isVisible }) => (
@@ -42,7 +46,7 @@ const CaseStudy = ({ data }) => {
               )}
             </VisibilitySensor>
           </div>
-          <div className="bottom pl pr">
+          <div className="bottom pl pr" style={{ paddingTop: "0" }}>
             <div className="link-container">
               <VisibilitySensor once partialVisibility={true}>
                 {({ isVisible }) => (

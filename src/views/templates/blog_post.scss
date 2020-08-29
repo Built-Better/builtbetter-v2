@@ -90,6 +90,26 @@
     }
   }
 
+  .body-content {
+    img {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    figcaption {
+      text-align: center;
+      padding-top: 12px;
+      color: $secondary-color;
+    }
+  }
+
+  @include xl {
+    .overview {
+      justify-content: flex-start;
+      padding-top: 48px;
+    }
+  }
+
   @include lg {
     .overview {
       justify-content: start;
@@ -144,8 +164,13 @@
       }
     }
     .overview {
-      flex-direction: column;
+      flex-direction: row;
       align-items: baseline;
+      flex-wrap: wrap;
+
+      h5 {
+        width: 100%;
+      }
 
       h5,
       .social-icon {

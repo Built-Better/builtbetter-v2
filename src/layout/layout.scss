@@ -56,13 +56,13 @@ section {
 @include lg {
   body {
     padding: {
+      top: 60px;
       right: 12px;
       left: 12px;
     }
   }
 
   .main-container {
-    padding-top: 35px;
     &[data-collapsed="true"] {
       main {
         transform: none;
