@@ -45,6 +45,10 @@
             label {
               color: red;
             }
+
+            .error {
+              opacity: 1;
+            }
           }
 
           label {
@@ -85,6 +89,40 @@
             font-size: 16px;
             border: 1px solid $off-black;
             font-family: $main-font;
+            resize: none;
+          }
+
+          .error {
+            opacity: 0;
+            transition: color 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            position: absolute;
+            right: 0;
+            height: 100%;
+            top: 0;
+            padding-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .symbol {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 2px solid red;
+              border-radius: 50%;
+              font-size: 24px;
+              color: red;
+              font-weight: bold;
+              height: 30px;
+              width: 30px;
+              right: 10px;
+            }
+          }
+          &.textarea-entry {
+            .error {
+              align-items: flex-end;
+              height: calc(100% - 18px);
+            }
           }
         }
 

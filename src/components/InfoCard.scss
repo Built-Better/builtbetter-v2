@@ -89,4 +89,18 @@
       }
     }
   }
+
+  @include sm {
+    color: $off-black;
+    cursor: default;
+
+    > div {
+      background-color: white;
+    }
+
+    p {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }

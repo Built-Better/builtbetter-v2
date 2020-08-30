@@ -4,6 +4,7 @@
   padding: 24px;
   padding-bottom: 48px;
   color: $off-black;
+  background-color: white;
 
   h5 {
     text-transform: uppercase;
@@ -20,28 +21,43 @@
     }
   }
 
-  .items {
+  .cols {
     display: flex;
-    flex-direction: column;
+    flex-flow: wrap;
 
-    .item {
-      display: flex;
-      line-height: 2;
+    > div {
+      width: calc(50% - 48px);
+    }
 
-      &:nth-of-type(even) {
-        justify-content: flex-end;
+    .summary {
+      padding-right: 48px;
+    }
+
+    .collapsibles {
+      padding-left: 48px;
+
+      h6 span {
+        font-weight: bold;
       }
 
-      > div {
-        width: 50%;
-
-        @include md {
-          width: 100%;
+      .collapsible {
+        &:last-of-type {
+          border-bottom: none;
         }
       }
+    }
+  }
 
-      .number {
-        font-weight: 700;
+  @include lg {
+    .cols {
+      > div {
+        width: 100%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
+      .collapsibles {
+        padding-top: 24px;
       }
     }
   }

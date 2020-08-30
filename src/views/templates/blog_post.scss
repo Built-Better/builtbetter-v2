@@ -1,6 +1,61 @@
 @import "../../utililties/theme.scss";
 
 .blog_post {
+  .default-header {
+    position: relative;
+  }
+  .content {
+    .common {
+      font-size: 100px !important;
+      margin-bottom: -40px !important;
+
+      @include lg {
+        font-size: 80px !important;
+        margin-bottom: -30px !important;
+      }
+
+      @include md {
+        font-size: 60px !important;
+        margin-bottom: 0px !important;
+      }
+
+      @include sm {
+        font-size: 38px !important;
+      }
+
+      @include xs {
+        font-size: 30px !important;
+      }
+    }
+    .custom {
+      font-size: 66.66px !important;
+
+      @include lg {
+        font-size: 52.8px !important;
+      }
+
+      @include md {
+        font-size: 39.6px !important;
+        margin-top: -20px !important;
+      }
+
+      @include sm {
+        font-size: 25.08px !important;
+        margin-top: -10px !important;
+      }
+
+      @include sm {
+        font-size: 19.8px !important;
+      }
+    }
+  }
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
   .link-container {
     h5 {
       color: $secondary-color;
@@ -57,7 +112,6 @@
 
   .post-body {
     background-color: white;
-    padding: 24px;
   }
 
   .related {
@@ -100,9 +154,15 @@
   }
 
   @include xl {
-    .overview {
-      justify-content: flex-start;
-      padding-top: 48px;
+    .bottom {
+      .link-container {
+        order: 2;
+      }
+      .overview {
+        order: 1;
+        justify-content: flex-start;
+        padding-top: 48px;
+      }
     }
   }
 
@@ -152,11 +212,25 @@
     }
   }
 
-  @include sm {
+  @include xl {
+    .default-header {
+      flex-flow: column;
+    }
+    .middle {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      flex-grow: 1;
+    }
+    .bottom {
+      height: min-content;
+      position: relative;
+    }
     .overview {
       flex-direction: row;
       align-items: baseline;
       flex-wrap: wrap;
+      padding-bottom: 0 !important;
 
       h5 {
         width: 100%;

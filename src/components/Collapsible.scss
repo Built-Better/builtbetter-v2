@@ -42,10 +42,11 @@
     .question {
       margin: 0;
       color: $off-black;
-      font-weight: 400;
+      font-weight: 700;
       flex-grow: 1;
       text-align: left;
       transition: color 0.25s ease;
+      padding-right: 12px;
     }
   }
 
@@ -58,8 +59,8 @@
 
   .plus-minus {
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     transition: background-color 0.25s ease;
 
     &:before,
@@ -74,9 +75,9 @@
     &:before {
       top: 0;
       left: 50%;
-      width: 4px;
+      width: 2px;
       height: 100%;
-      margin-left: -2px;
+      margin-left: -1px;
     }
 
     /* horizontal line */
@@ -84,8 +85,8 @@
       top: 50%;
       left: 0;
       width: 100%;
-      height: 4px;
-      margin-top: -2px;
+      height: 2px;
+      margin-top: -1px;
     }
 
     &[data-active="true"] {
@@ -95,23 +96,6 @@
       &:after {
         transform: rotate(180deg);
       }
-    }
-  }
-
-  @include md {
-    button {
-      flex-direction: column;
-      align-items: baseline;
-
-      .plus-minus {
-        margin-top: 12px;
-      }
-    }
-  }
-
-  @include sm {
-    .plus-minus {
-      display: none;
     }
   }
 }

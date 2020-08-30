@@ -150,6 +150,36 @@
     padding: 0;
     .cards .service {
       min-height: 400px;
+
+      > div {
+        background-color: white;
+        color: $off-black;
+
+        p {
+          opacity: 1;
+          transform: none;
+        }
+
+        .more {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      }
+    }
+  }
+
+  @include xs {
+    .bottom {
+      flex-direction: column;
+
+      .number,
+      .more {
+        width: 100%;
+      }
+
+      .more {
+        padding-top: 24px;
+      }
     }
   }
 }

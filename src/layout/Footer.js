@@ -64,6 +64,8 @@ const Footer = () => {
             </p>
           </div>
           <div className="links">
+            <h5 className="general-header">General</h5>
+
             <AniLink
               cover
               duration={1.5}

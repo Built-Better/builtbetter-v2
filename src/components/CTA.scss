@@ -9,6 +9,18 @@
   }
   text-align: center;
 
+  &.pb-md {
+    @include md {
+      padding-bottom: 7% !important;
+    }
+  }
+
+  &.pt-md {
+    @include md {
+      padding-top: 7% !important;
+    }
+  }
+
   h2 {
     width: 100%;
     text-align: center;
@@ -58,11 +70,16 @@
   @include md {
     h2 {
       line-height: initial;
-      border-top: 2px solid $secondary-color;
+      border: none;
+      margin-bottom: 0;
 
       span {
         padding: 0;
       }
+    }
+
+    a {
+      padding-top: 0;
     }
   }
 }

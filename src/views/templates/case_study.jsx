@@ -83,7 +83,7 @@ const CaseStudy = ({ data }) => {
 
         <VisibilitySensor once partialVisibility={true}>
           {({ isVisible }) => (
-            <section className="image">
+            <section className="image pl pr">
               <img
                 src={project.laptop_preview.url}
                 alt="Laptop and Mobile previews"
@@ -92,7 +92,7 @@ const CaseStudy = ({ data }) => {
             </section>
           )}
         </VisibilitySensor>
-        <section className="common bg-white">
+        <section className="bg-white pl pr">
           <VisibilitySensor once partialVisibility={true}>
             {({ isVisible }) => (
               <div className={isVisible ? "slideUp enter" : "slideUp"}>
@@ -117,7 +117,7 @@ const CaseStudy = ({ data }) => {
 
         <VisibilitySensor once partialVisibility={true}>
           {({ isVisible }) => (
-            <section className="image">
+            <section className="image pl pr" style={{ marginBottom: "0" }}>
               <img
                 src={project.desktop_preview.url}
                 alt="Laptop and Mobile previews"
@@ -127,56 +127,151 @@ const CaseStudy = ({ data }) => {
           )}
         </VisibilitySensor>
 
-        <section className="common bg-white">
-          <h5>Design</h5>
-          <div
-            className="title"
-            dangerouslySetInnerHTML={createMarkup(project.design_title)}
-          ></div>
-          <div
-            dangerouslySetInnerHTML={createMarkup(project.design_body)}
-          ></div>
+        <section className="bg-white pl pr">
+          <VisibilitySensor once partialVisibility={true}>
+            {({ isVisible }) => (
+              <div className={isVisible ? "slideUp enter" : "slideUp"}>
+                <h5>Design</h5>
+                <div
+                  className="title"
+                  dangerouslySetInnerHTML={createMarkup(project.design_title)}
+                ></div>
+              </div>
+            )}
+          </VisibilitySensor>
+          <VisibilitySensor once partialVisibility={true}>
+            {({ isVisible }) => (
+              <div className={isVisible ? "slideUp enter" : "slideUp"}>
+                <div
+                  dangerouslySetInnerHTML={createMarkup(project.design_body)}
+                ></div>
+              </div>
+            )}
+          </VisibilitySensor>
         </section>
-        <section className="image">
-          <img src={project.screen_one.url} alt="Laptop and Mobile previews" />
+        <section className="image pl pr">
+          <VisibilitySensor once partialVisibility={true}>
+            {({ isVisible }) => (
+              <div>
+                <img
+                  src={project.screen_one.url}
+                  alt="Laptop and Mobile previews"
+                  className={isVisible ? "slideUp enter" : "slideUp"}
+                />
+              </div>
+            )}
+          </VisibilitySensor>
         </section>
-        <section className="common bg-white">
-          <h5>Development</h5>
-          <div
-            className="title"
-            dangerouslySetInnerHTML={createMarkup(project.dev_title)}
-          ></div>
-          <div dangerouslySetInnerHTML={createMarkup(project.dev_body)}></div>
+        <section className="bg-white pl pr">
+          <VisibilitySensor once partialVisibility={true}>
+            {({ isVisible }) => (
+              <div className={isVisible ? "slideUp enter" : "slideUp"}>
+                <h5>Development</h5>
+                <div
+                  className="title"
+                  dangerouslySetInnerHTML={createMarkup(project.dev_title)}
+                ></div>
+              </div>
+            )}
+          </VisibilitySensor>
+          <VisibilitySensor once partialVisibility={true}>
+            {({ isVisible }) => (
+              <div className={isVisible ? "slideUp enter" : "slideUp"}>
+                <div
+                  dangerouslySetInnerHTML={createMarkup(project.dev_body)}
+                ></div>
+              </div>
+            )}
+          </VisibilitySensor>
         </section>
-        <section className="image">
-          <img src={project.screen_two.url} alt="Laptop and Mobile previews" />
+        <section className="image pl pr">
+          <VisibilitySensor once partialVisibility={true}>
+            {({ isVisible }) => (
+              <div>
+                <img
+                  src={project.screen_two.url}
+                  alt="Laptop and Mobile previews"
+                  className={isVisible ? "slideUp enter" : "slideUp"}
+                />
+              </div>
+            )}
+          </VisibilitySensor>
         </section>
-        <section className="common bg-white">
-          <h5>Outcome</h5>
-          <div
-            className="title"
-            dangerouslySetInnerHTML={createMarkup(project.outcome_title)}
-          ></div>
-          <div
-            dangerouslySetInnerHTML={createMarkup(project.outcome_body)}
-          ></div>
+        <section className="bg-white pl pr">
+          <VisibilitySensor once partialVisibility={true}>
+            {({ isVisible }) => (
+              <div className={isVisible ? "slideUp enter" : "slideUp"}>
+                <h5>Outcome</h5>
+                <div
+                  className="title"
+                  dangerouslySetInnerHTML={createMarkup(project.outcome_title)}
+                ></div>
+              </div>
+            )}
+          </VisibilitySensor>
+          <VisibilitySensor once partialVisibility={true}>
+            {({ isVisible }) => (
+              <div className={isVisible ? "slideUp enter" : "slideUp"}>
+                <div
+                  dangerouslySetInnerHTML={createMarkup(project.outcome_body)}
+                ></div>
+              </div>
+            )}
+          </VisibilitySensor>
         </section>
+        {project.testimonial_name &&
+        project.testimonial_body &&
+        project.testimonial_image.url ? (
+          <section className="testimonial pl pr">
+            <VisibilitySensor once partialVisibility={true}>
+              {({ isVisible }) => (
+                <h5 className={isVisible ? "slideUp enter" : "slideUp"}>
+                  What They Say
+                </h5>
+              )}
+            </VisibilitySensor>
+            <div>
+              <div className="left">
+                <VisibilitySensor once partialVisibility={true}>
+                  {({ isVisible }) => (
+                    <div>
+                      <h1 className={isVisible ? "slideUp enter" : "slideUp"}>
+                        {project.testimonial_name}. <br />{" "}
+                        {project.testimonial_position}.
+                      </h1>
+                    </div>
+                  )}
+                </VisibilitySensor>
+                <VisibilitySensor once partialVisibility={true}>
+                  {({ isVisible }) => (
+                    <div
+                      dangerouslySetInnerHTML={createMarkup(
+                        project.testimonial_body
+                      )}
+                      className={
+                        isVisible ? "slideUp enter body" : "slideUp body"
+                      }
+                    ></div>
+                  )}
+                </VisibilitySensor>
+              </div>
+              <div className="right">
+                <VisibilitySensor once partialVisibility={true}>
+                  {({ isVisible }) => (
+                    <img
+                      src={project.testimonial_image.url}
+                      alt="Testimonial Source"
+                      className={isVisible ? "slideUp enter" : "slideUp"}
+                    />
+                  )}
+                </VisibilitySensor>
+              </div>
+            </div>
+          </section>
+        ) : (
+          ""
+        )}
 
-        <section className="common testimonial">
-          <div className="left">
-            <h5>What They Say</h5>
-            <div
-              className="title"
-              dangerouslySetInnerHTML={createMarkup(project.testimonial_source)}
-            ></div>
-            <div
-              dangerouslySetInnerHTML={createMarkup(project.testimonial_body)}
-            ></div>
-          </div>
-          <div className="right">
-            <img src={project.testimonial_image.url} alt="Testimonial Source" />
-          </div>
-        </section>
         <section>
           <CTA
             title="Work With Us"

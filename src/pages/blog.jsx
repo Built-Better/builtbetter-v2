@@ -25,7 +25,7 @@ const BlogPage = data => {
                       isVisible ? "slideUp enter common" : "slideUp common"
                     }
                   >
-                    <h1 className="common">The Blog</h1>
+                    The Blog
                   </h1>
                   <h1
                     className={

@@ -1,5 +1,6 @@
 import React from "react"
 import VisibilitySensor from "../../components/VisibilityCensor"
+import Collapsible from "../../components/Collapsible"
 
 import "./ApproachItems.scss"
 
@@ -19,99 +20,71 @@ export default function ApproachItems(props) {
         )}
       </VisibilitySensor>
 
-      <div className="items">
+      <div className="cols">
         <VisibilitySensor once partialVisibility={true}>
           {({ isVisible }) => (
-            <div className="item">
-              <div className={isVisible ? "slideUp enter" : "slideUp"}>
-                <h4>
-                  <span className="number">/01</span> First Step
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                  nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet.
-                </p>
-              </div>
+            <div className="summary">
+              <p className={isVisible ? "slideUp enter" : "slideUp"}>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                takimata sanctus est Lorem ipsum dolor sit amet. Stet clita kasd
+                gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                amet.
+              </p>
             </div>
           )}
         </VisibilitySensor>
-        <VisibilitySensor once partialVisibility={true}>
-          {({ isVisible }) => (
-            <div className="item">
+
+        <div className="collapsibles">
+          <VisibilitySensor once partialVisibility={true}>
+            {({ isVisible }) => (
               <div className={isVisible ? "slideUp enter" : "slideUp"}>
-                <h4>
-                  <span className="number">/02</span> Second Step
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                  nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet.
-                </p>
+                <Collapsible
+                  html={true}
+                  question={`<span>/01</span>&nbsp;&nbsp;Discovery`}
+                  answer="nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet."
+                />
+                <Collapsible
+                  html={true}
+                  question={`<span>/02</span>&nbsp;&nbsp;Strategy`}
+                  answer="nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet."
+                />
+                <Collapsible
+                  html={true}
+                  question={`<span>/03</span>&nbsp;&nbsp;Creative`}
+                  answer="nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet."
+                />
+                <Collapsible
+                  html={true}
+                  question={`<span>/04</span>&nbsp;&nbsp;Development`}
+                  answer="nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet."
+                />
+                <Collapsible
+                  html={true}
+                  question={`<span>/05</span>&nbsp;&nbsp;Hand-Off`}
+                  answer="nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet."
+                />
               </div>
-            </div>
-          )}
-        </VisibilitySensor>
-        <VisibilitySensor once partialVisibility={true}>
-          {({ isVisible }) => (
-            <div className="item">
-              <div className={isVisible ? "slideUp enter" : "slideUp"}>
-                <h4>
-                  <span className="number">/03</span> Third Step
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                  nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet.
-                </p>
-              </div>
-            </div>
-          )}
-        </VisibilitySensor>
-        <VisibilitySensor once partialVisibility={true}>
-          {({ isVisible }) => (
-            <div className="item">
-              <div className={isVisible ? "slideUp enter" : "slideUp"}>
-                <h4>
-                  <span className="number">/04</span> Fourth Step
-                </h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                  ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                  nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-                  sea takimata sanctus est Lorem ipsum dolor sit amet.
-                </p>
-              </div>
-            </div>
-          )}
-        </VisibilitySensor>
+            )}
+          </VisibilitySensor>
+        </div>
       </div>
     </section>
   )

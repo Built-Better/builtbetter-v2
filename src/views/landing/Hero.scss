@@ -43,6 +43,56 @@
     }
   }
 
+  .contact-us {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+
+    @include md {
+      display: none;
+    }
+
+    &.mobile {
+      display: none;
+      position: relative;
+      padding: 24px 8.33%;
+      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box; /* Firefox, other Gecko */
+      box-sizing: border-box;
+      width: 100%;
+      top: unset;
+      right: unset;
+
+      @include md {
+        display: flex;
+      }
+    }
+
+    &:hover {
+      svg {
+        transform: translateX(15px);
+      }
+    }
+
+    p {
+      margin: 0;
+      padding-right: 10px;
+      color: $off-black;
+    }
+
+    svg {
+      transition: transform 0.25s ease-in-out;
+
+      line,
+      path {
+        stroke: $off-black;
+      }
+    }
+  }
+
   .quick-links {
     display: flex;
     justify-content: flex-end;

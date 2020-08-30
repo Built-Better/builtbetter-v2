@@ -71,7 +71,6 @@ const BlogPostTemplate = ({ data, location }) => {
           <div
             className="middle pl pr"
             style={{
-              paddingBottom: "0",
               alignItems: "center",
               display: "flex",
             }}
@@ -79,6 +78,13 @@ const BlogPostTemplate = ({ data, location }) => {
             <VisibilitySensor once partialVisibility={true}>
               {({ isVisible }) => (
                 <div className="content">
+                  <h1
+                    className={
+                      isVisible ? "slideUp enter common" : "slideUp common"
+                    }
+                  >
+                    {post.category}
+                  </h1>
                   <h1
                     className={
                       isVisible ? "slideUp enter custom" : "slideUp custom"
@@ -143,7 +149,7 @@ const BlogPostTemplate = ({ data, location }) => {
           <img src={post.image.url} alt={post.title} />
         </section>
 
-        <section className="post-body">
+        <section className="post-body pl pr">
           <div
             className="body-content"
             dangerouslySetInnerHTML={createMarkup(post.body)}

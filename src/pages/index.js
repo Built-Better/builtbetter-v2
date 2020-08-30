@@ -15,13 +15,14 @@ const IndexPage = props => {
     <Layout>
       <SEO title="Home" />
       <Hero />
-      <Intro />
+      {/* <Intro /> */}
       <Work />
       <CTA
         title="We've got more"
         linkText="View More Case Studies"
         linkUrl="/case_studies"
         styles={{ paddingBottom: "0", marginBottom: "0" }}
+        classes="pb-md"
       />
       <Services />
       <FAQ />
@@ -31,6 +32,7 @@ const IndexPage = props => {
         linkText="All Blog Posts"
         linkUrl="/blog"
         styles={{ paddingTop: "24px" }}
+        classes="pt-md"
       />
     </Layout>
   )

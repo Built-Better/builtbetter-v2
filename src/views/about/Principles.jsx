@@ -46,7 +46,11 @@ export default function Principles(props) {
               </div>
               <div className="what-we-dont">
                 <h3>
-                  What we <strong>don't</strong> do
+                  What we{" "}
+                  <strong style={{ textDecoration: "line-through" }}>
+                    don't
+                  </strong>{" "}
+                  do
                 </h3>
                 <div className="items">
                   <div className="col">

@@ -102,6 +102,16 @@
       padding-top: 24px;
     }
 
+    .general-header {
+      display: none;
+      width: 100%;
+      margin: {
+        top: 0;
+        bottom: 24px;
+      }
+      text-transform: uppercase;
+    }
+
     div {
       &.social {
         width: 35%;
@@ -181,7 +191,7 @@
           justify-content: flex-start;
         }
 
-        @include sm {
+        @include md {
           flex-direction: column;
           align-items: baseline;
 
@@ -201,6 +211,27 @@
           }
         }
       }
+    }
+  }
+
+  // Re-order at this break point
+  @include md {
+    .social {
+      order: 1;
+    }
+    .copy {
+      order: 3;
+      padding-top: 12px !important;
+    }
+    .links {
+      order: 2 !important;
+      flex-wrap: wrap !important;
+      padding-top: 48px !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+    }
+    .general-header {
+      display: block !important;
     }
   }
 }

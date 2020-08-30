@@ -122,6 +122,9 @@ export default function Form(props) {
                       nameRef.current = e
                     }}
                   />
+                  <span className="error">
+                    <span className="symbol">!</span>
+                  </span>
                 </div>
                 <div
                   className="form-entry"
@@ -141,6 +144,9 @@ export default function Form(props) {
                       companyRef.current = e
                     }}
                   />
+                  <span className="error">
+                    <span className="symbol">!</span>
+                  </span>
                 </div>
                 <div
                   className="form-entry"
@@ -161,9 +167,12 @@ export default function Form(props) {
                       emailRef.current = e
                     }}
                   />
+                  <span className="error">
+                    <span className="symbol">!</span>
+                  </span>
                 </div>
                 <div
-                  className="form-entry"
+                  className="form-entry textarea-entry"
                   onClick={e => handleFieldClick("message")}
                   onBlur={() => handleFieldClickOff("message")}
                   data-error={errors.message ? "true" : "false"}
@@ -182,6 +191,9 @@ export default function Form(props) {
                     }}
                     rows="10"
                   ></textarea>
+                  <span className="error">
+                    <span className="symbol">!</span>
+                  </span>
                 </div>
                 {errors.exampleRequired && <span>This field is required</span>}
 

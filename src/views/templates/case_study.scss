@@ -2,14 +2,15 @@
 
 .case-study {
   section {
+    h5 {
+      text-transform: uppercase;
+      margin: 0;
+    }
+
     &.image {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: {
-        top: 48px;
-        bottom: 48px;
-      }
 
       img {
         max-width: 100%;
@@ -17,12 +18,21 @@
     }
 
     &.testimonial {
-      display: flex;
-      padding-top: 72px;
-      padding-bottom: 72px;
+      > div {
+        display: flex;
+      }
+
+      h5 {
+        margin: 0;
+        padding-bottom: 6px;
+      }
+
+      h1 {
+        margin: 0;
+      }
 
       .left {
-        p {
+        .body {
           padding-top: 48px;
           font-style: italic;
         }
@@ -35,9 +45,11 @@
     }
   }
 
-  @include lg {
+  @include xl {
     .testimonial {
-      flex-direction: column;
+      > div {
+        flex-direction: column;
+      }
 
       .right {
         padding-left: 0 !important;

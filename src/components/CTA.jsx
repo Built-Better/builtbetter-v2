@@ -12,6 +12,7 @@ CTA.propTypes = {
   linkUrl: PropTypes.string,
   backgroundColor: PropTypes.string,
   styles: PropTypes.object,
+  classes: PropTypes.string,
 }
 
 CTA.defaultProps = {
@@ -21,12 +22,13 @@ CTA.defaultProps = {
   linkUrl: "",
   backgroundColor: "",
   styles: {},
+  classes: "",
 }
 
 export default function CTA(props) {
   return (
     <section
-      className="cta pl pr"
+      className={`cta pl pr ` + props.classes}
       style={{ backgroundColor: props.backgroundColor, ...props.styles }}
     >
       <VisibilitySensor once partialVisibility={true}>

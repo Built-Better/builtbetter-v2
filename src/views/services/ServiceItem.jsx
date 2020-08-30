@@ -17,9 +17,8 @@ export default function ServiceItem(props) {
     <VisibilitySensor once partialVisibility={true}>
       {({ isVisible }) => (
         <div className="service-grid-item">
-          <h4 className={isVisible ? "slideUp enter" : "slideUp"}>
-            {props.title}
-          </h4>
+          <h4 className="desktop-title">{props.title}</h4>
+          <h4 className="mobile-title">{props.title}</h4>
           <p>{props.body}</p>
         </div>
       )}

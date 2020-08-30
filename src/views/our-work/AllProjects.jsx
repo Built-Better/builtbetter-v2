@@ -4,6 +4,7 @@ import slugify from "slugify"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import VisibilitySensor from "../../components/VisibilityCensor"
 
+import "./AllProjects.scss"
 import "../../views/landing/Work.scss"
 import Arrow from "../../images/assets/arrow.svg"
 
@@ -11,11 +12,7 @@ export default function AllProjets(props) {
   const projects = useStaticQuery(graphql`
     query allWorkQuery {
       bbschema {
-        contents(
-          id: "5f39d6d3c9e4a93ead5627c7"
-          limit: 3
-          filter_obj: { selected: "true" }
-        ) {
+        contents(id: "5f39d6d3c9e4a93ead5627c7") {
           content
         }
       }
@@ -23,7 +20,10 @@ export default function AllProjets(props) {
   `).bbschema.contents
 
   return (
-    <section className="selected-work pl pr" style={{ background: "none" }}>
+    <section
+      className="selected-work all-work pl pr"
+      style={{ background: "none" }}
+    >
       <div className="projects">
         {projects.map((project, i) => {
           return (

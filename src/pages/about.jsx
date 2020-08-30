@@ -42,9 +42,9 @@ const AboutPage = props => {
           </div>
         </section>
         <Team />
-        <Story />
-        <Principles />
+        {/* <Story /> */}
         <Values />
+        <Principles />
         <CTA
           title="Work With Us"
           body={`Got an idea for a project or need some help? \n blah blah blah, interest info about contacting us for work.`}

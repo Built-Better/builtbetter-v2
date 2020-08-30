@@ -50,7 +50,7 @@ export default function Work(props) {
                   direction="right"
                   bg="#bb73f1"
                   className="project"
-                  to={`case_study/${slugify(project.content.title)}`}
+                  to={`/case_study/${slugify(project.content.title)}`}
                 >
                   <div className={isVisible ? "slideUp enter" : "slideUp"}>
                     <img

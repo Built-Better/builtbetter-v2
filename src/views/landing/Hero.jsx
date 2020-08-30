@@ -19,6 +19,23 @@ export default function Hero(props) {
   return (
     <section className="hero">
       <div className="hero-container pl pr">
+        <VisibilitySensor once partialVisibility={true}>
+          {({ isVisible }) => (
+            <AniLink
+              cover
+              duration={1.5}
+              direction="right"
+              bg="#bb73f1"
+              className={
+                isVisible ? "slideUp enter contact-us" : "slideUp contact-us"
+              }
+              to="/contact"
+            >
+              <p>Contact Us</p>
+              <Arrow />
+            </AniLink>
+          )}
+        </VisibilitySensor>
         <div className="top">
           <VisibilitySensor once partialVisibility={true}>
             {({ isVisible }) => (
@@ -86,6 +103,25 @@ export default function Hero(props) {
               <FontAwesomeIcon icon={faLinkedinIn} />
             </div>
           </div>
+        )}
+      </VisibilitySensor>
+      <VisibilitySensor once partialVisibility={true}>
+        {({ isVisible }) => (
+          <AniLink
+            cover
+            duration={1.5}
+            direction="right"
+            bg="#bb73f1"
+            className={
+              isVisible
+                ? "slideUp enter contact-us mobile"
+                : "slideUp contact-us mobile"
+            }
+            to="/contact"
+          >
+            <p>Contact Us</p>
+            <Arrow />
+          </AniLink>
         )}
       </VisibilitySensor>
     </section>
