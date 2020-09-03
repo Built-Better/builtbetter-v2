@@ -12,7 +12,15 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GlobalStateContext } from "../context/GlobalContextProvider"
 import OGImage from "../images/og-full-white.png"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({
+  description,
+  lang,
+  meta,
+  title,
+  customOGImage,
+  customUrl,
+  customDescription,
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -45,7 +53,7 @@ function SEO({ description, lang, meta, title }) {
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: customDescription ? customDescription : metaDescription,
         },
         {
           property: `og:title`,
@@ -53,7 +61,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: customDescription ? customDescription : metaDescription,
         },
         {
           property: `og:type`,
@@ -61,11 +69,15 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://builtbetter.tech${OGImage}`,
+          content: customOGImage
+            ? customOGImage
+            : `https://builtbetter.tech${OGImage}`,
         },
         {
           property: `og:url`,
-          content: `https://builtbetter.tech/`,
+          content: customUrl
+            ? `https://builtbetter.tech/${customUrl}`
+            : `https://builtbetter.tech/`,
         },
         {
           name: `twitter:card`,
@@ -81,7 +93,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: customDescription ? customDescription : metaDescription,
         },
       ].concat(meta)}
     >
