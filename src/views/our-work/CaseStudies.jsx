@@ -18,8 +18,6 @@ export default function CaseStudies(props) {
     }
   `).bbschema.contents
 
-  console.log(projects)
-
   return (
     <section className="case-studies pl pr">
       <h5>Case Studies</h5>

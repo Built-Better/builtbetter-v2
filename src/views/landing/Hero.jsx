@@ -11,10 +11,6 @@ import VisibilitySensor from "../../components/VisibilityCensor"
 import "./Hero.scss"
 import Arrow from "../../images/assets/arrow.svg"
 
-Hero.propTypes = {}
-
-Hero.defaultProps = {}
-
 export default function Hero(props) {
   return (
     <section className="hero">

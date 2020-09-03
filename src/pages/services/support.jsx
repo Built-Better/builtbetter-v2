@@ -38,7 +38,21 @@ const SupportPage = props => {
             </VisibilitySensor>
           </div>
         </section>
-        <ServiceGrid />
+        <ServiceGrid
+          title_one="Support strategies for all of our projects,"
+          title_two="designed for your needs."
+          services={[
+            [
+              "Domain & Server Hosting",
+              "Got a domain and server already? Great, we can work with that. Have nothing but an idea and a vision? Great, we can provide all the building blocks. Our team can manage domains, servers, and hosting to provide a fast and secure home for your project on the web.",
+            ],
+            ["User Tickets & Debugging", ""],
+            ["Maintainable Code Bases", ""],
+            ["Content Updates", ""],
+            ["Future Features", ""],
+            ["Ongoing Support", ""],
+          ]}
+        />
         <CTA
           title="Work With Us"
           body={`Got an idea for a project and think we’re a great fit?\n We’d love to talk about it.`}
