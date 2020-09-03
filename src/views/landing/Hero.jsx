@@ -32,18 +32,17 @@ export default function Hero(props) {
             </AniLink>
           )}
         </VisibilitySensor>
-
-        <VisibilitySensor once partialVisibility={true}>
-          {({ isVisible }) => (
-            <div className="top">
+        <div className="top">
+          <VisibilitySensor once partialVisibility={true}>
+            {({ isVisible }) => (
               <h1 className={isVisible ? "slideUp enter" : "slideUp"}>
                 Personalized web & software products,
                 <span className="highlight">built</span> by us, to help you do
                 business <span className="highlight">better</span>.
               </h1>
-            </div>
-          )}
-        </VisibilitySensor>
+            )}
+          </VisibilitySensor>
+        </div>
 
         <VisibilitySensor once partialVisibility={true}>
           {({ isVisible }) => (

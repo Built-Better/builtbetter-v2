@@ -30,24 +30,36 @@ export default function ServiceOverview(props) {
       <>
         <div className="row">
           <div className="col">
-            <p>— {props.services[0]}</p>
+            <p>
+              <span>—</span> {props.services[0]}
+            </p>
           </div>
           <div className="col">
-            <p>— {props.services[1]}</p>
+            <p>
+              <span>—</span> {props.services[1]}
+            </p>
           </div>
           <div className="col">
-            <p>— {props.services[2]}</p>
+            <p>
+              <span>—</span> {props.services[2]}
+            </p>
           </div>
         </div>
         <div className="row">
           <div className="col">
-            <p>— {props.services[3]}</p>
+            <p>
+              <span>—</span> {props.services[3]}
+            </p>
           </div>
           <div className="col">
-            <p>— {props.services[4]}</p>
+            <p>
+              <span>—</span> {props.services[4]}
+            </p>
           </div>
           <div className="col">
-            <p>— {props.services[5]}</p>
+            <p>
+              <span>—</span> {props.services[5]}
+            </p>
           </div>
         </div>
       </>
