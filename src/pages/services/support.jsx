@@ -46,11 +46,26 @@ const SupportPage = props => {
               "Domain & Server Hosting",
               "Got a domain and server already? Great, we can work with that. Have nothing but an idea and a vision? Great, we can provide all the building blocks. Our team can manage domains, servers, and hosting to provide a fast and secure home for your project on the web.",
             ],
-            ["User Tickets & Debugging", ""],
-            ["Maintainable Code Bases", ""],
-            ["Content Updates", ""],
-            ["Future Features", ""],
-            ["Ongoing Support", ""],
+            [
+              "User Tickets & Debugging",
+              "Send those users and bugs our way and we’ll make sure they’re taken care of. You can rest assured knowing that your application is backed by our team.",
+            ],
+            [
+              "Maintainable Code Bases",
+              "We strive to write technically sound, easily maintainable code bases because we care about the next developer. Your in house developer will be glad you chose Built Better Technology.",
+            ],
+            [
+              "Content Updates",
+              "Routine content updates are time consuming. We can set up update packages or source the content from our own CMS to save you time and money.",
+            ],
+            [
+              "Future Features",
+              "Big projects are never really finished, they just evolve. We can stick around as the experts of your codebase to implement new features should there be a need.",
+            ],
+            [
+              "Ongoing Support",
+              "When you work with us, your problems are our problems. We offer full customer support for all of our projects after deployment. Customer support, training, and timely fixes can be incorporated into each of our projects.",
+            ],
           ]}
         />
         <CTA
