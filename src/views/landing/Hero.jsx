@@ -15,34 +15,31 @@ export default function Hero(props) {
   return (
     <section className="hero">
       <div className="hero-container pl pr">
-        <div>
-          <VisibilitySensor once partialVisibility={true}>
-            {({ isVisible }) => (
-              <AniLink
-                cover
-                duration={1.5}
-                direction="right"
-                bg="#bb73f1"
-                className={
-                  isVisible ? "slideUp enter contact-us" : "slideUp contact-us"
-                }
-                to="/contact"
-              >
-                <p>Contact Us</p>
-                <Arrow />
-              </AniLink>
-            )}
-          </VisibilitySensor>
-        </div>
-
         <div className="top">
           <VisibilitySensor once partialVisibility={true}>
             {({ isVisible }) => (
-              <h1 className={isVisible ? "slideUp enter" : "slideUp"}>
-                Personalized web & software products,
-                <span className="highlight">built</span> by us, to help you do
-                business <span className="highlight">better</span>.
-              </h1>
+              <div>
+                <h1 className={isVisible ? "slideUp enter" : "slideUp"}>
+                  Personalized web & software products,
+                  <span className="highlight">built</span> by us, to help you do
+                  business <span className="highlight">better</span>.
+                </h1>
+                <AniLink
+                  cover
+                  duration={1.5}
+                  direction="right"
+                  bg="#bb73f1"
+                  className={
+                    isVisible
+                      ? "slideUp enter contact-us"
+                      : "slideUp contact-us"
+                  }
+                  to="/contact"
+                >
+                  <p>Contact Us</p>
+                  <Arrow />
+                </AniLink>
+              </div>
             )}
           </VisibilitySensor>
         </div>
