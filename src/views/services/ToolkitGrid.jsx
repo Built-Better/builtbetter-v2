@@ -22,7 +22,7 @@ export default function ToolkitGrid(props) {
               Our Toolkit
             </h5>
             <h2 className={isVisible ? "slideUp enter" : "slideUp"}>
-              Sentence about our blog. <br /> More about our blog
+              {props.titleOne} <br /> {props.titleTwo}
             </h2>
           </>
         )}

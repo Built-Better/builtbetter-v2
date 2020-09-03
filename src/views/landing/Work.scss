@@ -21,15 +21,18 @@
 
   .projects {
     display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
 
     .project {
-      width: 100%;
-      height: 550px;
+      width: calc(50% - 12px);
+      height: 400px;
       overflow: hidden;
       position: relative;
       cursor: pointer;
+      margin-bottom: 24px;
 
-      &:not(:last-of-type) {
+      &:nth-of-type(odd) {
         margin-right: 24px;
       }
 
@@ -103,31 +106,51 @@
 
           svg {
             margin-left: 10px;
+
+            line,
+            path {
+              stroke: white;
+            }
           }
         }
       }
     }
   }
 
+  @include xxl {
+    .projects .project {
+      height: 350px !important;
+    }
+  }
+
   @include xl {
     .projects .project {
-      height: 450px;
+      height: 300px !important;
     }
   }
 
   @include lg {
-    .projects .project {
-      height: 350px;
+    .projects {
+      .project {
+        margin-right: 0 !important;
+        height: 450px !important;
+        width: 100%;
+      }
     }
   }
 
   @include md {
     .projects {
-      flex-direction: column;
-
       .project {
-        margin-bottom: 24px;
-        height: 450px;
+        height: 350px !important;
+      }
+    }
+  }
+
+  @include sm {
+    .projects {
+      .project {
+        height: 250px !important;
       }
     }
   }

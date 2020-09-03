@@ -41,9 +41,9 @@ export default function Subscribe() {
           <VisibilitySensor once partialVisibility={true}>
             {({ isVisible }) => (
               <p className={isVisible ? "slideUp enter" : "slideUp"}>
-                Want to keep up with the latest posts?
+                Like what you see and want more?
                 <br />
-                Subscribe today to receive emails about our latest posts.
+                Subscribe today and we’ll keep you up to date.
               </p>
             )}
           </VisibilitySensor>

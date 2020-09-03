@@ -13,8 +13,9 @@ const Footer = () => {
         <div className="ft-top">
           <div>
             <h2>
-              Sentence about us. <br />
-              More about us.
+              Digital done right.
+              <br />
+              Get in touch.
             </h2>
           </div>
           <div>

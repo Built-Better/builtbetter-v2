@@ -14,55 +14,16 @@ export default function ServiceGrid(props) {
               What We Do
             </h5>
             <h2 className={isVisible ? "slideUp enter" : "slideUp"}>
-              Sentence about our blog. <br /> More about our blog
+              {props.title_one} <br /> {props.title_two}
             </h2>
           </>
         )}
       </VisibilitySensor>
 
       <div className="grid">
-        <ServiceItem
-          title="Service 1"
-          body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-            est Lorem ipsum dolor sit amet."
-        />
-        <ServiceItem
-          title="Service 2"
-          body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-            est Lorem ipsum dolor sit amet."
-        />
-        <ServiceItem
-          title="Service 3"
-          body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-            est Lorem ipsum dolor sit amet."
-        />
-        <ServiceItem
-          title="Service 4"
-          body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-            est Lorem ipsum dolor sit amet."
-        />
-        <ServiceItem
-          title="Service 5"
-          body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-            est Lorem ipsum dolor sit amet."
-        />
-        <ServiceItem
-          title="Service 6"
-          body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor 
-            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-            est Lorem ipsum dolor sit amet."
-        />
+        {props.services.map(service => {
+          return <ServiceItem title={service[0]} body={service[1]} />
+        })}
       </div>
     </section>
   )

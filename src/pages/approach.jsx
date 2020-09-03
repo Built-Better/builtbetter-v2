@@ -31,7 +31,8 @@ const ApproachPage = props => {
                       isVisible ? "slideUp enter custom" : "slideUp custom"
                     }
                   >
-                    This is a small write up about our about us..
+                    Our unique combination of strategy and technical proficiency
+                    sets us apart.
                   </h1>
                 </div>
               )}
@@ -41,7 +42,7 @@ const ApproachPage = props => {
         <AppproachItems />
         <CTA
           title="Work With Us"
-          body={`Got an idea for a project or need some help? \n blah blah blah, interest info about contacting us for work.`}
+          body={`Got an idea for a project and think we’re a great fit? \n We’d love to talk about it.`}
           linkText="Contact Us"
           linkUrl="/contact"
           backgroundColor="white"

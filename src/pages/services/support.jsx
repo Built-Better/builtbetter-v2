@@ -40,8 +40,8 @@ const SupportPage = props => {
         </section>
         <ServiceGrid />
         <CTA
-          title="Need a quote?"
-          body={`Got an idea for a project or need some help? \n blah blah blah, interest info about contacting us for work.`}
+          title="Work With Us"
+          body={`Got an idea for a project and think we’re a great fit?\n We’d love to talk about it.`}
           linkText="Contact Us"
           linkUrl="/contact"
           backgroundColor="white"

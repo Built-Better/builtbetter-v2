@@ -8,19 +8,28 @@ import "./Work.scss"
 import Arrow from "../../images/assets/arrow.svg"
 
 export default function Work(props) {
-  const projects = useStaticQuery(graphql`
+  const combined_query = useStaticQuery(graphql`
     query SelectedWorkQuery {
       bbschema {
-        contents(
+        projects: contents(
+          id: "5f4ea46ac9e4a93ead5627db"
+          filter_obj: { selected: "true" }
+        ) {
+          content
+        }
+        cases: contents(
           id: "5f39d6d3c9e4a93ead5627c7"
-          limit: 3
           filter_obj: { selected: "true" }
         ) {
           content
         }
       }
     }
-  `).bbschema.contents
+  `)
+
+  const projects = combined_query.bbschema.cases.concat(
+    combined_query.bbschema.projects
+  )
 
   return (
     <section className="selected-work pl pr">
@@ -34,7 +43,7 @@ export default function Work(props) {
       <VisibilitySensor once partialVisibility={true}>
         {({ isVisible }) => (
           <h2 className={isVisible ? "slideUp enter" : "slideUp"}>
-            Sentence about our blog. <br /> More about our blog
+            Our work gets results. <br /> See some of our highlights.
           </h2>
         )}
       </VisibilitySensor>
@@ -50,7 +59,11 @@ export default function Work(props) {
                   direction="right"
                   bg="#bb73f1"
                   className="project"
-                  to={`/case_study/${slugify(project.content.title)}`}
+                  to={
+                    project.content.case_study_preview
+                      ? `/case_study/${slugify(project.content.title)}`
+                      : `/projects/${slugify(project.content.title)}`
+                  }
                 >
                   <div className={isVisible ? "slideUp enter" : "slideUp"}>
                     <img

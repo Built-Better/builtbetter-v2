@@ -47,13 +47,44 @@ const SoftwarePage = props => {
             </VisibilitySensor>
           </div>
         </section>
-        <ServiceGrid />
+        <ServiceGrid
+          title_one="A modern approach to software development,"
+          title_two="with your businesses goals at the core."
+          services={[
+            [
+              "UI/UX Strategy",
+              "Our primary concern is the project's usability for your business. We’ll take you through our project development process and get the user interface and experience perfected before our development team writes a line of code.",
+            ],
+            [
+              "User & Business Focused",
+              "You and your users don’t see the code, you see a product. Let us worry about speed, security, scalability and all the other technical buzz words you can think of. Let’s talk about how this investment will help your business.",
+            ],
+            [
+              "Iterative Development",
+              "Modern projects are subject to change at every step, we take an agile approach to all of our software projects and iterate until it's right.",
+            ],
+            [
+              "Hosting & Maintenance",
+              "Our clients rest easy with our products. We offer full support packages for all of our products including but not limited to: server hosting, training, test suites, code base maintenance, and user support.",
+            ],
+            [
+              "Modern Full Stack Application Development",
+              "We use the best tools available for the job, and we're always keeping up with new additions to the tech industry - we’re always learning! This lets us do our job faster and meet your needs best.",
+            ],
+            [
+              "Immense Collaboration",
+              "We want you to be a part of your project. We'll set up routine meetings and demos to gather feedback and make sure we're steering your project in the right direction.",
+            ],
+          ]}
+        />
         <ToolkitGrid
           images={[ReactJS, Node, DigitalOcean, Cyress, AdobeXd, Affinity]}
+          titleOne="We like to stay up to date with the latest toys."
+          titleTwo="Currently, we use the following tools on most of our projects."
         />
         <CTA
-          title="Need a quote?"
-          body={`Got an idea for a project or need some help? \n blah blah blah, interest info about contacting us for work.`}
+          title="Work With Us"
+          body={`Got an idea for a project and think we’re a great fit?\n We’d love to talk about it.`}
           linkText="Contact Us"
           linkUrl="/contact"
           backgroundColor="white"

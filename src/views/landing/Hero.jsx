@@ -36,17 +36,19 @@ export default function Hero(props) {
             </AniLink>
           )}
         </VisibilitySensor>
-        <div className="top">
-          <VisibilitySensor once partialVisibility={true}>
-            {({ isVisible }) => (
+
+        <VisibilitySensor once partialVisibility={true}>
+          {({ isVisible }) => (
+            <div className="top">
               <h1 className={isVisible ? "slideUp enter" : "slideUp"}>
-                Personalized web & software products,{" "}
+                Personalized web & software products,
                 <span className="highlight">built</span> by us, to help you do
                 business <span className="highlight">better</span>.
               </h1>
-            )}
-          </VisibilitySensor>
-        </div>
+            </div>
+          )}
+        </VisibilitySensor>
+
         <VisibilitySensor once partialVisibility={true}>
           {({ isVisible }) => (
             <div
@@ -63,7 +65,7 @@ export default function Hero(props) {
                 to="/our_work"
               >
                 <h5>Work</h5>
-                <p>We make some good stuff sometimes guys.</p>
+                <p>View our latest creations.</p>
                 <Arrow />
               </AniLink>
               <AniLink
@@ -75,7 +77,7 @@ export default function Hero(props) {
                 to="services"
               >
                 <h5>Services</h5>
-                <p>We make some good stuff sometimes guys.</p>
+                <p>View all of our digital services.</p>
                 <Arrow />
               </AniLink>
             </div>
@@ -94,13 +96,31 @@ export default function Hero(props) {
             className={isVisible ? "slideUp enter social" : "slideUp social"}
           >
             <div className="social-icon">
-              <FontAwesomeIcon icon={faInstagram} />
+              <a
+                href="https://www.instagram.com/builtbetter.tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
             </div>
             <div className="social-icon">
-              <FontAwesomeIcon icon={faFacebookF} />
+              <a
+                href="https://www.facebook.com/builtbetter.tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faFacebookF} />
+              </a>
             </div>
             <div className="social-icon">
-              <FontAwesomeIcon icon={faLinkedinIn} />
+              <a
+                href="https://www.linkedin.com/company/builtbettertech/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faLinkedinIn} />
+              </a>
             </div>
           </div>
         )}

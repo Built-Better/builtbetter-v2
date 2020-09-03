@@ -9,21 +9,35 @@ import "../../views/landing/Work.scss"
 import Arrow from "../../images/assets/arrow.svg"
 
 export default function AllProjets(props) {
-  const projects = useStaticQuery(graphql`
+  const combined_query = useStaticQuery(graphql`
     query allWorkQuery {
       bbschema {
-        contents(id: "5f39d6d3c9e4a93ead5627c7") {
+        projects: contents(id: "5f4ea46ac9e4a93ead5627db") {
+          content
+        }
+        cases: contents(id: "5f39d6d3c9e4a93ead5627c7") {
           content
         }
       }
     }
-  `).bbschema.contents
+  `)
+
+  const projects = combined_query.bbschema.projects.concat(
+    combined_query.bbschema.cases
+  )
 
   return (
     <section
       className="selected-work all-work pl pr"
       style={{ background: "none" }}
     >
+      <h5>All Projects</h5>
+      <h2>
+        Our entire body of work to date.
+        <br />
+        Take a look at all of our creations and the great companies we've worked
+        with.
+      </h2>
       <div className="projects">
         {projects.map((project, i) => {
           return (
@@ -35,7 +49,11 @@ export default function AllProjets(props) {
                   direction="right"
                   bg="#bb73f1"
                   className="project"
-                  to={`case_study/${slugify(project.content.title)}`}
+                  to={
+                    project.case_study_preview
+                      ? `/case_study/${slugify(project.content.title)}`
+                      : `/projects/${slugify(project.content.title)}`
+                  }
                 >
                   <div className={isVisible ? "slideUp enter" : "slideUp"}>
                     <img

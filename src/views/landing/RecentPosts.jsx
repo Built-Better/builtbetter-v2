@@ -31,7 +31,9 @@ export default function RecentPosts(props) {
               RECENT POSTS
             </h5>
             <h2 className={isVisible ? "slideUp enter" : "slideUp"}>
-              Sentence about our blog. <br /> More about our blog
+              We’re constantly learning everyday.
+              <br />
+              Don’t worry – we only write about the useful stuff.
             </h2>
           </>
         )}

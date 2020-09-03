@@ -19,8 +19,8 @@ const IndexPage = props => {
       <Work />
       <CTA
         title="We've got more"
-        linkText="View More Case Studies"
-        linkUrl="/case_studies"
+        linkText="View All Work"
+        linkUrl="/our_work"
         styles={{ paddingBottom: "0", marginBottom: "0" }}
         classes="pb-md"
       />

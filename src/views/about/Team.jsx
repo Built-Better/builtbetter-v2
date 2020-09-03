@@ -25,7 +25,7 @@ export default function Team(props) {
               Our Team
             </h5>
             <h2 className={isVisible ? "slideUp enter" : "slideUp"}>
-              Sentance about our team. <br /> Another sentance about our team.
+              Digital creators, <br /> On the pursuit of better.
             </h2>
           </>
         )}

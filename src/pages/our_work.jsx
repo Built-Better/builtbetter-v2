@@ -3,6 +3,7 @@ import VisibilitySensor from "../components/VisibilityCensor"
 
 import Layout from "../layout/layout"
 import SEO from "../layout/seo"
+import CaseStudies from "../views/our-work/CaseStudies"
 import AllProjects from "../views/our-work/AllProjects"
 import CTA from "../components/CTA"
 
@@ -31,17 +32,19 @@ const OurWorkPage = props => {
                       isVisible ? "slideUp enter custom" : "slideUp custom"
                     }
                   >
-                    This is a small write up about our work.
+                    We help businesses grow and create amazing digital
+                    experiences.
                   </h1>
                 </div>
               )}
             </VisibilitySensor>
           </div>
         </section>
+        <CaseStudies />
         <AllProjects />
         <CTA
           title="Work With Us"
-          body={`Got an idea for a project or need some help? \n blah blah blah, interest info about contacting us for work.`}
+          body={`Got an idea for a project and think we’re a great fit? \n We’d love to talk about it.`}
           linkText="Contact Us"
           linkUrl="/contact"
           backgroundColor="white"

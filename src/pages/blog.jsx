@@ -32,7 +32,8 @@ const BlogPage = data => {
                       isVisible ? "slideUp enter custom" : "slideUp custom"
                     }
                   >
-                    This is a small write up about our blog.
+                    Written by life-long learners. Made to share knowledge and
+                    perspective.
                   </h1>
                 </div>
               )}

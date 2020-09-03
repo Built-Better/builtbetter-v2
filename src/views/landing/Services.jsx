@@ -13,10 +13,12 @@ export default function Services(props) {
           {({ isVisible }) => (
             <>
               <h5 className={isVisible ? "slideUp enter" : "slideUp"}>
-                Our Services
+                What We Do
               </h5>
               <h2 className={isVisible ? "slideUp enter" : "slideUp"}>
-                Sentence about our blog. <br /> More about our blog
+                Helping companies do business better.
+                <br />
+                Let your brand stand out.
               </h2>
             </>
           )}
@@ -36,9 +38,11 @@ export default function Services(props) {
               <div className={isVisible ? "slideUp enter" : "slideUp"}>
                 <h4 className="title">Web Design & Development</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua.
+                  Beautifully custom designed and developed websites that make
+                  your business stand out from the competition. We combine
+                  strategy and utility every step of the way during the
+                  construction of your online presence – our websites look great
+                  and get results..
                 </p>
                 <div className="bottom">
                   <div className="number">/01</div>
@@ -63,9 +67,9 @@ export default function Services(props) {
               <div className={isVisible ? "slideUp enter" : "slideUp"}>
                 <h4 className="title">Web Apps & Software</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua.
+                  Simplify your workflows with the right custom software for
+                  your business operations. If it can be automated, we can bring
+                  it to life on the web.
                 </p>
                 <div className="bottom">
                   <div className="number">/02</div>
@@ -90,9 +94,8 @@ export default function Services(props) {
               <div className={isVisible ? "slideUp enter" : "slideUp"}>
                 <h4 className="title">App Rescues & Consultinge</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua.
+                  Above all, we are problem solvers. Software and design-based
+                  consulting for when you need an experienced fresh set of eyes.
                 </p>
                 <div className="bottom">
                   <div className="number">/03</div>
@@ -117,9 +120,9 @@ export default function Services(props) {
               <div className={isVisible ? "slideUp enter" : "slideUp"}>
                 <h4 className="title">App Upkeep & Support</h4>
                 <p>
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua.
+                  The project isn’t over when the development stops. We’ll be
+                  there for you long after with our tailored support and
+                  maintenance packages.
                 </p>
                 <div className="bottom">
                   <div className="number">/04</div>

@@ -83,7 +83,7 @@ export default function Form(props) {
               Contact Us
             </h5>
             <h2 className={isVisible ? "slideUp enter" : "slideUp"}>
-              Sentence about our process. <br /> Sentence about our process.
+              Have a project or idea? <br /> Let’s talk!
             </h2>
           </>
         )}
@@ -94,6 +94,7 @@ export default function Form(props) {
           <div className="form-layout">
             <div className="form-container">
               <form
+                id="contact"
                 name="contact"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"

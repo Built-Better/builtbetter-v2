@@ -30,7 +30,7 @@ exports.createPages = async function ({ actions, graphql }) {
   })
 
   // Case Study Pages
-  const projects_data = await graphql(`
+  const cases_data = await graphql(`
     query CaseStudiesQuery {
       bbschema {
         contents(id: "5f39d6d3c9e4a93ead5627c7") {
@@ -40,11 +40,33 @@ exports.createPages = async function ({ actions, graphql }) {
       }
     }
   `)
-  projects_data.data.bbschema.contents.forEach(project => {
+
+  cases_data.data.bbschema.contents.forEach(project => {
     const slug = `case_study/${slugify(project.content.title)}`
     actions.createPage({
       path: slug,
       component: require.resolve(`./src/views/templates/case_study.jsx`),
+      context: { id: project.id },
+    })
+  })
+
+  // Project Pages
+  const projects_data = await graphql(`
+    query ProjectsQuery {
+      bbschema {
+        contents(id: "5f4ea46ac9e4a93ead5627db") {
+          content
+          id
+        }
+      }
+    }
+  `)
+
+  projects_data.data.bbschema.contents.forEach(project => {
+    const slug = `projects/${slugify(project.content.title)}`
+    actions.createPage({
+      path: slug,
+      component: require.resolve(`./src/views/templates/project.jsx`),
       context: { id: project.id },
     })
   })

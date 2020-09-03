@@ -34,7 +34,7 @@ const AboutPage = props => {
                       isVisible ? "slideUp enter custom" : "slideUp custom"
                     }
                   >
-                    This is a small write up about our about us..
+                    Everything behind Built Better Technology.
                   </h1>
                 </div>
               )}
@@ -47,7 +47,7 @@ const AboutPage = props => {
         <Principles />
         <CTA
           title="Work With Us"
-          body={`Got an idea for a project or need some help? \n blah blah blah, interest info about contacting us for work.`}
+          body={`Got an idea for a project and think we’re a great fit? \n We’d love to talk about it.`}
           linkText="Contact Us"
           linkUrl="/contact"
           backgroundColor="white"

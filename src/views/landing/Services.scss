@@ -114,6 +114,19 @@
     }
   }
 
+  @media only screen and (max-width: 1500px) {
+    .service {
+      .bottom {
+        flex-direction: column;
+        align-items: baseline !important;
+
+        .more {
+          padding-top: 12px;
+        }
+      }
+    }
+  }
+
   @include xxl {
     .cards {
       flex-direction: column;
@@ -130,6 +143,14 @@
         &:nth-of-type(even) {
           margin-left: 12px;
           margin-right: 0;
+        }
+
+        .bottom {
+          flex-direction: row !important;
+
+          .more {
+            padding-top: 0 !important;
+          }
         }
       }
     }

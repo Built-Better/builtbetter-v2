@@ -14,8 +14,9 @@ export default function Values(props) {
               Our Values
             </h5>
             <h2 className={isVisible ? "slideUp enter" : "slideUp"}>
-              A few sentances about this section. <br /> A few sentances about
-              this section.
+              We commit to both work and play.
+              <br />
+              Here’s what drives us every day.
             </h2>
           </>
         )}
@@ -23,23 +24,23 @@ export default function Values(props) {
 
       <div className="info-cards">
         <InfoCard
-          title="Value 1"
-          body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+          title="Passion"
+          body="We love what we do and the crazy process that comes with it. From late nights and obsessing over the small details, it’s something that we never grow tired of."
           number="1"
         />
         <InfoCard
-          title="Value 2"
-          body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+          title="Teamwork"
+          body="We work together as a team, and not only within our company. We are big on collaborating with our clients and believe that it is essential to our process."
           number="2"
         />
         <InfoCard
-          title="Value 3"
-          body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+          title="Positivity"
+          body="It’s no secret, what we do can be challenging. But that’s why we love it. The late nights and breakthrough moments are what push us every day."
           number="3"
         />
         <InfoCard
-          title="Value 4"
-          body="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."
+          title="Learning"
+          body="We’re constantly learning and exploring the latest technologies - and we’ll never stop. Staying up to date on the most recent information is important to us."
           number="4"
         />
       </div>

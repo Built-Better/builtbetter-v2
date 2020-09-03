@@ -36,7 +36,7 @@ export default function ServiceOverview(props) {
             <p>— {props.services[1]}</p>
           </div>
           <div className="col">
-            <p>— {props.services[3]}</p>
+            <p>— {props.services[2]}</p>
           </div>
         </div>
         <div className="row">

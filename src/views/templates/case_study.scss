@@ -1,10 +1,21 @@
 @import "../../utililties/theme.scss";
 
 .case-study {
+  .overview {
+    p {
+      margin: 0;
+    }
+  }
   section {
     h5 {
       text-transform: uppercase;
       margin: 0;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      margin: 0;
+      padding-bottom: 24px;
     }
 
     &.image {
@@ -32,6 +43,7 @@
       }
 
       .left {
+        width: 66%;
         .body {
           padding-top: 48px;
           font-style: italic;
@@ -41,6 +53,10 @@
       .right {
         padding-left: 96px;
         padding-top: 24px;
+
+        img {
+          max-width: 100%;
+        }
       }
     }
   }
@@ -51,6 +67,9 @@
         flex-direction: column;
       }
 
+      .left {
+        width: 100% !important;
+      }
       .right {
         padding-left: 0 !important;
         padding-top: 48px !important;

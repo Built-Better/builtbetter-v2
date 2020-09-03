@@ -13,8 +13,9 @@ export default function Principles(props) {
               Our Principles
             </h5>
             <h2 className={isVisible ? "slideUp enter" : "slideUp"}>
-              A few sentances about this section. <br /> A few sentances about
-              this section.
+              Good work can be difficult to create.
+              <br />
+              But we don’t take shortcuts.
             </h2>
           </>
         )}
@@ -30,17 +31,14 @@ export default function Principles(props) {
                 <div className="items">
                   <div className="col">
                     <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
+                    <p>— Focus on the details</p>
+                    <p>— Respect time</p>
+                    <p>— Create unique experiences</p>
                   </div>
                   <div className="col">
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
+                    <p>— Value partnerships made</p>
+                    <p>— Celebrate wins</p>
+                    <p>— Be straightforward</p>
                   </div>
                 </div>
               </div>
@@ -54,19 +52,12 @@ export default function Principles(props) {
                 </h3>
                 <div className="items">
                   <div className="col">
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
+                    <p>— Work for free</p>
+                    <p>— Ignore our clients</p>
+                    <p>— Meet unrealistic timelines</p>
+                    <p>— Forfeit quality</p>
                   </div>
-                  <div className="col">
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
-                    <p>— Work collaboratively</p>
-                  </div>
+                  <div className="col"></div>
                 </div>
               </div>
             </div>

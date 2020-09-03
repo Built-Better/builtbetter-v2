@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import VisibilitySensor from "../components/VisibilityCensor"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import "./CTA.scss"
 import Arrow from "../images/assets/arrow.svg"
@@ -46,14 +47,17 @@ export default function CTA(props) {
             ) : (
               ""
             )}
-
-            <a
-              href={props.linkUrl}
+            <AniLink
+              cover
+              duration={1.5}
+              direction="right"
+              bg="#bb73f1"
+              to={props.linkUrl}
               className={isVisible ? "slideUp enter" : "slideUp"}
             >
               <p>{props.linkText}</p>
               <Arrow />
-            </a>
+            </AniLink>
           </>
         )}
       </VisibilitySensor>

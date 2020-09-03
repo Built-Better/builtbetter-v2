@@ -29,11 +29,11 @@ export default function Menu(props) {
               bg="#bb73f1"
               to="/our_work"
             >
-              <h2>
+              <h3>
                 Our Work
                 <Arrow />
-              </h2>
-              <p>This is a sentence about work.</p>
+              </h3>
+              <p>Stuff we’ve created.</p>
             </AniLink>
           </li>
           <li>
@@ -44,11 +44,11 @@ export default function Menu(props) {
               bg="#bb73f1"
               to="/services"
             >
-              <h2>
+              <h3>
                 Services
                 <Arrow />
-              </h2>
-              <p>This is a sentence about services.</p>
+              </h3>
+              <p>What we offer.</p>
             </AniLink>
           </li>
           <li>
@@ -59,11 +59,11 @@ export default function Menu(props) {
               bg="#bb73f1"
               to="/approach"
             >
-              <h2>
+              <h3>
                 Approach
                 <Arrow />
-              </h2>
-              <p>This is a sentence about approach.</p>
+              </h3>
+              <p>How we do it.</p>
             </AniLink>
           </li>
           <li>
@@ -74,11 +74,11 @@ export default function Menu(props) {
               bg="#bb73f1"
               to="/about"
             >
-              <h2>
+              <h3>
                 About
                 <Arrow />
-              </h2>
-              <p>This is a sentence about about.</p>
+              </h3>
+              <p>Who we are.</p>
             </AniLink>
           </li>
         </ul>

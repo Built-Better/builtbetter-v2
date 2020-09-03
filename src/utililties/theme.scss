@@ -248,7 +248,7 @@ section {
   background-color: white;
   color: $off-black;
   min-height: calc(100vh - 48px);
-  height: calc(100vh - 48px);
+  height: auto;
   display: flex;
   flex-direction: column;
   flex-flow: wrap;
@@ -274,7 +274,7 @@ section {
       }
 
       .custom {
-        font-size: 120px;
+        font-size: 100px;
         font-weight: 600;
         margin: 0;
         line-height: 1;

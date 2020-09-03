@@ -31,7 +31,7 @@ const ContactPage = props => {
                       isVisible ? "slideUp enter custom" : "slideUp custom"
                     }
                   >
-                    This is a small write up about our contact page.
+                    Think we’re a great fit for your project?
                   </h1>
                 </div>
               )}
@@ -41,7 +41,7 @@ const ContactPage = props => {
         <Form />
         <CTA
           title="Need a quote?"
-          body={`Got an idea for a project or need some help? \n blah blah blah, interest info about contacting us for work.`}
+          body={`Already know the scale of your project and need a quick estimate? \n Fill out our questionnaire and we’ll provide you with a complimentary quote.`}
           linkText="Get a Quote"
           linkUrl="https://docs.google.com/forms/d/e/1FAIpQLSdtI6EdsuO9STSVTUtPMGU8xHqjDNn98Lf6qf4lF87UF1tIXw/viewform"
           backgroundColor="white"
