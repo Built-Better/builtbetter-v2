@@ -94,45 +94,19 @@ export default function BlogPosts(props) {
         setCols(3)
         setWidth(
           window.getComputedStyle(itemRef.current).width.replace("px", "") / 3 -
-            16
+            14.5
         )
-        setCardHeight(602)
-        handleContainerHeight(3, 602)
+        setCardHeight(594)
+        handleContainerHeight(3, 594)
         onFilter("all")
-      } else if (windowWidth > 992 && windowWidth <= 1200) {
-        setCols(3)
-        setWidth(
-          window.getComputedStyle(itemRef.current).width.replace("px", "") / 3 -
-            16
-        )
-        setCardHeight(600)
-        handleContainerHeight(3, 600)
-        onFilter("all")
-      } else if (windowWidth > 768 && windowWidth <= 992) {
+      } else if (windowWidth > 768 && windowWidth <= 1200) {
         setCols(2)
         setWidth(
           window.getComputedStyle(itemRef.current).width.replace("px", "") / 2 -
-            14
+            9
         )
         setCardHeight(572)
         handleContainerHeight(2, 572)
-        onFilter("all")
-      } else if (windowWidth > 576 && windowWidth <= 768) {
-        setCols(2)
-        setWidth(
-          window.getComputedStyle(itemRef.current).width.replace("px", "") / 2 -
-            13
-        )
-        setCardHeight(582)
-        handleContainerHeight(2, 582)
-        onFilter("all")
-      } else if (windowWidth > 375 && windowWidth <= 576) {
-        setCols(1)
-        setWidth(
-          window.getComputedStyle(itemRef.current).width.replace("px", "")
-        )
-        setCardHeight(552)
-        handleContainerHeight(1, 562)
         onFilter("all")
       } else {
         setCols(1)
@@ -279,7 +253,7 @@ export default function BlogPosts(props) {
   }
 
   return (
-    <div className="blog-posts" id="blog-posts">
+    <div className="blog-posts pl pr" id="blog-posts">
       <div className="filters">
         {filters.map(f => (
           <div
