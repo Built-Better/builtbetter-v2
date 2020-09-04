@@ -75,7 +75,7 @@ export default function Form(props) {
   }
 
   return (
-    <section className="contact-form">
+    <section className="contact-form pl pr">
       <VisibilitySensor once partialVisibility={true}>
         {({ isVisible }) => (
           <>

@@ -24,13 +24,6 @@ const PrivacyPage = props => {
                   >
                     Privacy Policy
                   </h1>
-                  <h1
-                    className={
-                      isVisible ? "slideUp enter custom" : "slideUp custom"
-                    }
-                  >
-                    This is a small write up about our about us..
-                  </h1>
                 </div>
               )}
             </VisibilitySensor>

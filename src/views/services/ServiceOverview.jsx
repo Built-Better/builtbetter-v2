@@ -85,20 +85,33 @@ export default function ServiceOverview(props) {
       </VisibilitySensor>
       <VisibilitySensor once partialVisibility={true}>
         {({ isVisible }) => (
-          <p
-            className={
-              isVisible ? "slideUp enter description" : "slideUp description"
-            }
-          >
-            {props.description}
-          </p>
+          <div>
+            <p
+              className={
+                isVisible ? "slideUp enter description" : "slideUp description"
+              }
+            >
+              {props.description}
+            </p>
+          </div>
         )}
       </VisibilitySensor>
       <VisibilitySensor once partialVisibility={true}>
         {({ isVisible }) => (
-          <div className={isVisible ? "slideUp enter" : "slideUp"}>
-            <h5 style={{ marginBottom: 0 }}>Services We Offer</h5>
-            <div className="service-highlights">
+          <div>
+            <h5
+              style={{ marginBottom: 0 }}
+              className={isVisible ? "slideUp enter" : "slideUp"}
+            >
+              Services We Offer
+            </h5>
+            <div
+              className={
+                isVisible
+                  ? "slideUp enter service-highlights"
+                  : "slideUp service-highlights"
+              }
+            >
               {getServices()}
               <div className="learn-more">
                 <AniLink

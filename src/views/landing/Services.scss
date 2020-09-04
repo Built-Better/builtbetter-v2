@@ -192,14 +192,15 @@
   @include xs {
     .bottom {
       flex-direction: column;
+      display: block !important;
 
       .number,
       .more {
         width: 100%;
       }
 
-      .more {
-        padding-top: 24px;
+      .number {
+        padding-bottom: 24px !important;
       }
     }
   }

@@ -50,6 +50,7 @@
   &[data-active="false"] {
     opacity: 0;
     transition-delay: 0ms;
+    pointer-events: none;
   }
 }
 

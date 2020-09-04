@@ -37,10 +37,9 @@ export default function ApproachItems(props) {
             </div>
           )}
         </VisibilitySensor>
-
-        <div className="collapsibles">
-          <VisibilitySensor once partialVisibility={true}>
-            {({ isVisible }) => (
+        <VisibilitySensor once partialVisibility={true}>
+          {({ isVisible }) => (
+            <div className="collapsibles">
               <div className={isVisible ? "slideUp enter" : "slideUp"}>
                 <Collapsible
                   html={true}
@@ -83,9 +82,9 @@ export default function ApproachItems(props) {
                   why we offer our partners support and maintenance packages with every hand-off."
                 />
               </div>
-            )}
-          </VisibilitySensor>
-        </div>
+            </div>
+          )}
+        </VisibilitySensor>
       </div>
     </section>
   )

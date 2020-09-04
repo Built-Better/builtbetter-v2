@@ -50,7 +50,6 @@
     }
   }
   .bottom {
-    position: absolute;
     bottom: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -151,6 +150,9 @@
       padding-top: 12px;
       color: $secondary-color;
     }
+    figure {
+      text-align: center;
+    }
   }
 
   @include xl {
@@ -163,12 +165,6 @@
         justify-content: flex-start;
         padding-top: 48px;
       }
-    }
-  }
-
-  @include lg {
-    .overview {
-      justify-content: start;
     }
 
     .related {
@@ -189,6 +185,12 @@
 
     .related-posts > div {
       width: calc(50% - 12px) !important;
+    }
+  }
+
+  @include lg {
+    .overview {
+      justify-content: start;
     }
   }
 

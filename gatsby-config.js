@@ -1,10 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `Built Better Technology Web Template`,
-    description: `Official website starter of Built Better Technology`,
+    title: `Built Better Technology`,
+    description: `Official website of Built Better Technology`,
     author: `@builtbetter`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-172965958-1",
+        head: true,
+      },
+    },
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-sass`,
     {
