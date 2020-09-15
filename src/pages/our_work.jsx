@@ -32,7 +32,7 @@ const OurWorkPage = props => {
                       isVisible ? "slideUp enter custom" : "slideUp custom"
                     }
                   >
-                    We help businesses grow and create amazing digital
+                    We help businesses grow by creating amazing digital
                     experiences.
                   </h1>
                 </div>

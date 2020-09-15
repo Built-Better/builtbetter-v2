@@ -32,19 +32,19 @@ export default function FAQ(props) {
               />
               <Collapsible
                 question="What if I don’t like the design of my website?"
-                answer="We have yet to run into this situation, but if you’re not happy, we’re not happy. We will work with you over the design iterations until we create a solution that’s what your business needs. We make sure to lay out exactly what you can expect from our team and include a schedule for each step in the process in all our project proposals."
+                answer="We have yet to run into this situation, but if you’re not happy, we’re not happy. We will work with you over the design iterations until we create a solution that’s right for your business. We make sure to lay out exactly what you can expect from our team and include a schedule for each step in the process in all our project proposals."
               />
               <Collapsible
                 question="Will I be able to update my site’s content and will I have to pay for this?"
-                answer="We use our own content management system designed specially for letting non-technical folks edit the content of a website. When we start the project, we’ll outline everything on your site that may need to change. From there, we’ll include this content in the CMS so that you can edit it within a few clicks, at any time. We set you up with an account and quick training session and you’re off to the races, no more paying hundreds of dollars a month to pay a developer for updates. The price is included in the monthly cost of hosting your website and varies by the size of the project."
+                answer="We use our own content management system (CMS) designed specially for letting non-technical folks edit the content of a website. When we start the project, we’ll outline everything on your site that may need to change. From there, we’ll include this content in the CMS so that you can edit it within a few clicks, at any time. We set you up with an account and quick training session and you’re all set, no more paying hundreds of dollars a month to pay a developer for updates. The price is included in the monthly cost of hosting your website and varies by the size of the project."
               />
               <Collapsible
                 question="What exactly does a software consultant do?"
-                answer="If you have a project you’d like to get off the ground and need a place to start, or you already have a team that needs guidance on some aspect of the project, software consulting may be for you. We won’t actually write any code; you have people for that. Instead, we will come in and address the project and come up with a strategy for you and your team to execute on. This could be something as broad as application architecture and technology choices, or just guidance on integrating testing and dev ops into your workflows. If you want to see if we are a good fit for your project, just reach out and we’ll let you know."
+                answer="If you have a project you’d like to get off the ground or you already have a team that needs guidance, software consulting may be for you. During our consult we won’t write any code, instead we will come in and address the project and come up with a strategy for you and your team. This could be something as broad as application architecture and technology choices, or simply guidance on integrating testing and dev ops into your workflows. If you think we're a good fit for your project, contact us – we'd love to talk."
               />
               <Collapsible
                 question="Am I on my own after the project is complete?"
-                answer="We create tailor made maintenance and support packages for all our website and software projects. If you need support once the project is completed, we’ve got you covered."
+                answer="We create tailor-made maintenance and support packages for all our website and software projects. If you need support once the project is completed, we’ve got you covered."
               />
             </div>
           </div>

@@ -42,7 +42,7 @@ export default function Services(props) {
                   your business stand out from the competition. We combine
                   strategy and utility every step of the way during the
                   construction of your online presence – our websites look great
-                  and get results..
+                  and get results.
                 </p>
                 <div className="bottom">
                   <div className="number">/01</div>

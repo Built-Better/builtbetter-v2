@@ -33,10 +33,9 @@ export default function AllProjets(props) {
     >
       <h5>All Projects</h5>
       <h2>
-        Our entire body of work to date.
+        Our entire body of work to date,
         <br />
-        Take a look at all of our creations and the great companies we've worked
-        with.
+        and the great companies we've worked with.
       </h2>
       <div className="projects">
         {projects.map((project, i) => {
