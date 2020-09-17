@@ -25,9 +25,38 @@
     display: flex;
   }
 
+  @include xl {
+    .members {
+      flex-flow: wrap;
+
+      .image-card {
+        width: calc(50% - 12px);
+        margin-bottom: 24px;
+        height: 650px;
+
+        &:not(:first-of-type) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
   @include md {
     .members {
       flex-direction: column;
+
+      .image-card {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include sm {
+    .members {
+      .image-card {
+        height: 500px;
+      }
     }
   }
 }
