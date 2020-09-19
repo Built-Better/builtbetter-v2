@@ -5,14 +5,14 @@ module.exports = {
     author: `@builtbetter`,
   },
   plugins: [
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     // The property ID; the tracking code won't be generated without it
-    //     trackingId: "UA-172965958-1",
-    //     head: true,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-172965958-1",
+        head: true,
+      },
+    },
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-sass`,
     {
