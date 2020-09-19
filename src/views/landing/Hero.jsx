@@ -95,33 +95,30 @@ export default function Hero(props) {
             <div
               className={isVisible ? "slideUp enter social" : "slideUp social"}
             >
-              <div className="social-icon">
-                <a
-                  href="https://www.instagram.com/builtbetter.tech/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={faInstagram} />
-                </a>
-              </div>
-              <div className="social-icon">
-                <a
-                  href="https://www.facebook.com/builtbetter.tech/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={faFacebookF} />
-                </a>
-              </div>
-              <div className="social-icon">
-                <a
-                  href="https://www.linkedin.com/company/builtbettertech/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={faLinkedinIn} />
-                </a>
-              </div>
+              <a
+                className="social-icon"
+                href="https://www.instagram.com/builtbetter.tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a
+                className="social-icon"
+                href="https://www.facebook.com/builtbetter.tech/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faFacebookF} />
+              </a>
+              <a
+                className="social-icon"
+                href="https://www.linkedin.com/company/builtbettertech/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faLinkedinIn} />
+              </a>
             </div>
           )}
         </VisibilitySensor>
