@@ -88,7 +88,7 @@ const Footer = () => {
             </AniLink>
             <p className="divider">|</p>
             <a
-              href="https://www.buildingblockscms.tech/"
+              href="https://dashboard.buildingblockscms.tech/"
               target="_blank"
               rel="noopener noreferrer"
             >
