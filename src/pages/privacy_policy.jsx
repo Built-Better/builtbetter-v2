@@ -32,9 +32,9 @@ const PrivacyPage = props => {
         <section className="pl pr">
           <h2>Privacy Policy</h2>
           <p>
-            This privacy notice discloses the privacy practices for ursasol.ca.
-            This privacy notice applies solely to information collected by this
-            website. It will notify you of the following:
+            This privacy notice discloses the privacy practices for
+            builtbetter.tech. This privacy notice applies solely to information
+            collected by this website. It will notify you of the following:
           </p>
           <ul>
             <li>

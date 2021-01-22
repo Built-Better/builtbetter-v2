@@ -92,7 +92,7 @@ export default function Services(props) {
               to="/services/consulting"
             >
               <div className={isVisible ? "slideUp enter" : "slideUp"}>
-                <h4 className="title">App Rescues & Consultinge</h4>
+                <h4 className="title">App Rescues & Consulting</h4>
                 <p>
                   Above all, we are problem solvers. Software and design-based
                   consulting for when you need an experienced fresh set of eyes.
