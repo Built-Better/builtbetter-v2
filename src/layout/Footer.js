@@ -23,8 +23,8 @@ const Footer = () => {
             <a href="tel:12505886941">
               <h4 className="phone">250.588.6941</h4>
             </a>
-            <a href="mailto:info@builtbetter.tech">
-              <h4 className="email">info@builtbetter.tech</h4>
+            <a href="mailto:admin@builtbetter.tech">
+              <h4 className="email">admin@builtbetter.tech</h4>
             </a>
           </div>
           <div>
